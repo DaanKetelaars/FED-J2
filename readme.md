@@ -68,4 +68,4 @@
 
 **Screenshot(s) van de tweede pagina (small screen):**
 
-<img src="images/wikipedia01.png" width="375px" alt="omschrijving van de pagina">
+<img src="images/wikipedia02.png" width="375px" alt="omschrijving van de pagina">
