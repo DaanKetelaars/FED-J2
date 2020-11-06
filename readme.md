@@ -62,7 +62,7 @@
 
 **Je opdracht:** -Wikipedia: https://nl.wikipedia.org/wiki/Hoofdpagina-
 
-**Extra uitleg:** -Wil mij graag focussen op web animaties en meer te doen met vanilla JS-
+**Extra uitleg:** -Meer gaan focussen op Web animaties en functionaliteiten in de website maken met Vanilla JS-
 
 **Screenshot(s) van de eerste pagina (small screen):**
 
