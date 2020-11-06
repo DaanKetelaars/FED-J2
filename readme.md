@@ -61,6 +61,7 @@
 **Je focus:** -responsive & surface laag-
 
 **Je opdracht:** -Wikipedia: https://nl.wikipedia.org/wiki/Hoofdpagina-
+
 **Extra uitleg:** -Wil mij graag focussen op web animaties en meer te doen met vanilla JS-
 
 **Screenshot(s) van de eerste pagina (small screen):**
