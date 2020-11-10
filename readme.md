@@ -60,14 +60,14 @@
 
 **Je focus:** -responsive & surface laag-
 
-**Je opdracht:** -Wikipedia: https://nl.wikipedia.org/wiki/Hoofdpagina-
+**Je opdracht:** -Wikipedia: https://www.spacex.com & https://www.spacex.com/vehicles/falcon-9/
 
-**Extra uitleg:** -Meer gaan focussen op Web animaties en functionaliteiten in de website maken met Vanilla JS-
+**Extra uitleg:** -Meer gaan focussen op Web animaties en vanilla JS-
 
 **Screenshot(s) van de eerste pagina (small screen):**
 
-<img src="images/wikipedia01.png" width="375px" alt="omschrijving van de pagina">
+<img src="images/spacex01.png" width="375px" alt="omschrijving van de pagina">
 
 **Screenshot(s) van de tweede pagina (small screen):**
 
-<img src="images/wikipedia02.png" width="375px" alt="omschrijving van de pagina">
+<img src="images/spacex02.png" width="375px" alt="omschrijving van de pagina">
