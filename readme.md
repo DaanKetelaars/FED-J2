@@ -52,7 +52,11 @@
 
 -uitwerken voor de 1e werkgroep - eind van de eerste week-
 
-## Intake (week 1)
+**Breakdownschets 01**
+<img src="images/proces-assets/breakdownschets01.png" width="375px" alt="Breakdownschets 1">
+
+**Breakdownschets 02**
+<img src="images/proces-assets/breakdownschets02.png" width="375px" alt="Breakdownschets 2">
 
 -uitwerken voor de kick-off werkgroep - begin van de eerste week-
 
@@ -66,8 +70,8 @@
 
 **Screenshot(s) van de eerste pagina (small screen):**
 
-<img src="images/spacex01.png" width="375px" alt="omschrijving van de pagina">
+<img src="images/proces-assets/spacex01.png" width="375px" alt="SpaceX home page mobile">
 
 **Screenshot(s) van de tweede pagina (small screen):**
 
-<img src="images/spacex02.png" width="375px" alt="omschrijving van de pagina">
+<img src="images/proces-assets/spacex02.png" width="375px" alt="SpaceX Flacon 9 page mobile">
