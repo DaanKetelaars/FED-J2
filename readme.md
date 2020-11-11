@@ -53,9 +53,11 @@
 -uitwerken voor de 1e werkgroep - eind van de eerste week-
 
 **Breakdownschets 01**
+
 <img src="images/proces-assets/breakdownschets01.png" width="375px" alt="Breakdownschets 1">
 
 **Breakdownschets 02**
+
 <img src="images/proces-assets/breakdownschets02.png" width="375px" alt="Breakdownschets 2">
 
 -uitwerken voor de kick-off werkgroep - begin van de eerste week-
