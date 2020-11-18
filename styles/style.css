@@ -1,5 +1,380 @@
-/* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;  
+/*********************
+
+CONTENT: 
+01 - BASE
+02 - NAVIGATION + HAMBURGER MENU
+03 - MAIN (HOMEPAGE)
+04 - RESPONSIVE
+
+*********************/
+
+
+
+
+
+/************ 
+BASE
+************/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+/************ 
+NAVIGATION + HAMBURGER MENU 
+************/
+
+
+/* MAIN NAVIGATION */
+
+header {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+.main_nav {
+  padding: 2em 4em;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  position: relative;
+  background-color: transparent;
+}
+
+.main_nav ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.main_nav ul li.primary_menu_link {
+  margin-top: .5em;
+}
+
+#logo img {
+  width: 210px;
+  height: 100%;
+  margin-right: 2.5em;
+}
+
+.main_nav ul li.primary_menu_link a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: .75em;
+  margin-right: 1.75em;
+}
+
+/* HAM MENU CLOSED */
+.sub_nav {
+  background: #000;
+  top: 0;
+  right: 0;
+  width: 0vw;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  z-index: 100;
+  transform: translateX(20em);
+  transition: all 1s cubic-bezier(.215, .610, .355, 1);
+}
+
+.sub_nav.open_subNav ul {
+  opacity: 1;
+  background: #000;
+}
+
+.sub_nav.open_subNav {
+  transform: translateX(0em);
+}
+
+.sub_nav ul {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100vw;
+  padding: 6em 4em;
+  transition: opacity .5s ease-in-out;
+}
+
+.sub_nav ul li.secondary_menu_link,
+li.mobile_link {
+  padding: 1em 0em;
+  border-bottom: .1em solid #444;
+  width: 100%;
+  text-align: right;
+}
+
+li.primary_menu_link a {
+  position: relative;
+  padding-bottom: .125em;
+}
+
+/* li.primary_menu_link a:after {
+  background: #fff;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transition: all .5s cubic-bezier(.215, .610, .355, 1);
+  cursor: pointer;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
+  -webkit-transition: -webkit-transform .6s cubic-bezier(.19, 1, .22, 1);
+  transition: -webkit-transform .6s cubic-bezier(.19, 1, .22, 1);
+  transition: transform .6s cubic-bezier(.19, 1, .22, 1);
+  transition: transform .6s cubic-bezier(.19, 1, .22, 1), -webkit-transform .6s cubic-bezier(.19, 1, .22, 1);
+} */
+
+/* li.primary_menu_link a:hover {
+  -webkit-transition-duration: .4s;
+  transition-duration: .4s;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: left center;
+  transform-origin: bottom center;
+  cursor: pointer;
+} */
+
+.mobile_link {
+  display: none;
+}
+
+.sub_nav ul li.secondary_menu_link a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 1em;
+}
+
+.sub_nav ul li.mobile_link a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 1em;
+}
+
+/* HAM MENU CLICKED */
+
+.sub_nav.open_subNav {
+  width: 28vw;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 1s cubic-bezier(.215, .610, .355, 1);
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay.open_overlay {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.btn_menu {
+  position: absolute;
+  right: 4em;
+  z-index: 999;
+  margin: 0 1em;
+  background-color: transparent;
+  border: none;
+}
+
+.btn_menu:after,
+.btn_menu:before,
+.btn_menu div {
+  background-color: #fff;
+  content: '';
+  display: block;
+  height: 2px;
+  width: 1.25em;
+  margin: .21em 0;
+  transition: all .5s cubic-bezier(.215, .610, .355, 1);
+  cursor: pointer;
+}
+
+.open_hamMenu:before {
+  background-color: #fff;
+  content: '';
+  display: block;
+  transform: rotate(45deg) translateX(.20em);
+  height: 2px;
+  width: 1.25em;
+}
+
+.open_hamMenu:after {
+  background-color: #fff;
+  content: '';
+  display: block;
+  transform: rotate(-45deg) translateX(.20em);
+  height: 2px;
+  width: 1.25em;
+}
+
+.open_hamMenu div {
+  display: none;
+}
+
+
+/************ 
+MAIN (HOMEPAGE)
+************/
+main {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+section h3 {
+  color: #FFF;
+  font-size: 1em;
+  line-height: 1em;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+section h1 {
+  color: #FFF;
+  font-size: 2.125em;
+  line-height: 1em;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+section p {
+  color: #FFF;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-style: normal;
+}
+
+section#hero {
+  background: url(../images/docking.jpg) no-repeat bottom center / cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section#second {
+  background: url(../images/home_demo2.jpg) no-repeat center center / cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+section#third {
+  background: url(../images/iss_game.jpg) no-repeat center center / cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+section#fourth {
+  background: url(../images/SN8.jpg) no-repeat left center / cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+section#fifth {
+  background: url(../images/home_moon.jpg) no-repeat center center / cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+/************ 
+RESPONSIVE
+************/
+@media screen and (max-width: 64em) {
+  section {
+    padding: 3em 1em 0em 2em;
+  }
+
+  .btn_menu {
+    right: 0;
+  }
+
+  .sub_nav.open_subNav ul {
+    padding: 3em 1em 0em 3em;
+  }
+
+  .sub_nav ul {
+    padding: 3em 1em 0em 3em;
+  }
+
+  #logo img {
+    width: 150px;
+    margin-right: 0em;
+  }
+
+  .sub_nav ul li.mobile_link a {
+    font-size: .75em;
+  }
+
+  .sub_nav ul li.secondary_menu_link a {
+    font-size: .8em;
+  }
+
+  .main_nav {
+    justify-content: center;
+    padding: 1em 4em;
+  }
+
+  .main_nav ul {
+    justify-content: center;
+  }
+
+  .btn_menu:after,
+  .btn_menu:before {
+    margin: .125em 0;
+  }
+
+  .sub_nav.open_subNav {
+    width: 55vw;
+    transform: translateX(0em);
+  }
+
+  .sub_nav ul li.mobile_link {
+    display: block;
+  }
+
+  .main_nav ul li.primary_menu_link {
+    display: none;
+
+  }
+}

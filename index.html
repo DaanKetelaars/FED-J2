@@ -1,19 +1,72 @@
 <!doctype html>
 <html lang="nl">
-	
+
 <head>
 	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
+	<meta name="author" content="Daan Ketelaars">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Howdy</title>
-	
+	<title>SpaceX</title>
 	<link href="styles/style.css" rel="stylesheet">
 </head>
 
 <body>
-	<h1>Howdy</h1>
+
+	<header>
+		<div class="overlay"></div>
+		<!-- desktop and main nav -->
+		<nav class="main_nav">
+			<ul>
+				<li><a href="#" id="logo"><img src="images/logo-spacex.svg" alt="Logo SpaceX"></a></li>
+				<li class="primary_menu_link"><a href="#">Falcon 9</a></li>
+				<li class="primary_menu_link"><a href="">Falcon Heavy</a></li>
+				<li class="primary_menu_link"><a href="">Dragon</a></li>
+				<li class="primary_menu_link"><a href="">Starship</a></li>
+				<li class="primary_menu_link"><a href="">Human Spaceflight</a></li>
+				<li class="primary_menu_link"><a href="">Rideshare</a></li>
+			</ul>
+		</nav>
+
+		<!-- mobile nav and sub nav -->
+		<button class="btn_menu" type="button">
+			<div></div>
+		</button>
+		<nav class="sub_nav">
+			<ul>
+				<li class="mobile_link"><a href="#">Falcon 9</a></li>
+				<li class="mobile_link"><a href="">Falcon Heavy</a></li>
+				<li class="mobile_link"><a href="">Dragon</a></li>
+				<li class="mobile_link"><a href="">Starship</a></li>
+				<li class="mobile_link"><a href="">Human Spaceflight</a></li>
+				<li class="mobile_link"><a href="">Rideshare</a></li>
+				<li class="secondary_menu_link"><a href="">Missions</a></li>
+				<li class="secondary_menu_link"><a href="">Launches</a></li>
+				<li class="secondary_menu_link"><a href="">Careers</a></li>
+				<li class="secondary_menu_link"><a href="">Updates</a></li>
+				<li class="secondary_menu_link"><a href="">Shop</a></li>
+
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="hero">
+			<h3>Current Mission</h3>
+			<h1>Crew-1 Mission</h1>
+			<p>On Monday, November 16 at 11:01 p.m. EST, Dragon autonomously docked with the International Space
+				Station.</p>
+			<a href="#">Watch now</a>
+		</section>
+		<section id="second" data-bg data-bg-mobile="./images/mobile-backgrounds/docking.webp"
+			data-bg-desktop="./images/desktop-backgrounds/docking.jpg"></section>
+		<section id="third"></section>
+		<section id="fourth"></section>
+		<section id="fifth"></section>
+
+
+	</main>
+
+
 	<script src="scripts/script.js"></script>
 </body>
-	
+
 </html>
