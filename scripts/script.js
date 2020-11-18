@@ -3,6 +3,7 @@
 CONTENT: 
 01 - HAMBURGER MENU
 02 - BACKGROUND IMAGES (HOMEPAGE)
+03 - FADEIN ON SCROLL
 
 ***********/
 
@@ -40,6 +41,7 @@ for (let index = 0; index < bgImg.length; index++) {
 
 
 
+
     } else {
         bgImg[index].style.backgroundImage = 'url(' + bgImg[index].getAttribute('data-bg-desktop') + ')';
         bgImg[index].style.backgroundRepeat = "no-repeat";
@@ -48,18 +50,20 @@ for (let index = 0; index < bgImg.length; index++) {
     }
 }
 
-// var imageBgs = document.querySelectorAll('[data-bg]');
-// var screenWidth = window.innerWidth;
+/* FADEIN ON SCROLL */
 
-// for(var i=0; i<imageBgs.length; i++) {
-//     if( screenWidth < 768 ){
-//         // Load mobile image
-//         imageBgs[i].style.backgroundImage = 'url('+imageBgs[i].getAttribute('data-bg-img-mobile')+')';
-//     } else if( screenWidth >= 768 && screenWidth <= 1024 ) {
-//         // Ipad
-//         imageBgs[i].style.backgroundImage = 'url('+imageBgs[i].getAttribute('data-bg-img-tablet')+')';
-//     } else {
-//         // desktop image
-//         imageBgs[i].style.backgroundImage = 'url('+imageBgs[i].getAttribute('data-bg-img-desktop')+')';
-//     }
-// }
+let fadeInElements = document.querySelectorAll(".fade-element");
+window.addEventListener('scroll', fadeIn);
+
+function fadeIn() {
+    for (let i = 0; i < fadeInElements.length; i++) {
+        const elem = fadeInElements[i]
+        const distInView = elem.getBoundingClientRect().top - window.innerHeight - 50;
+        if (distInView < 0) {
+            elem.classList.add("inView");
+        } else {
+            elem.classList.remove("inView");
+        }
+    }
+}
+fadeIn();
