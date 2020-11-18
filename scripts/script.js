@@ -33,10 +33,11 @@ for (let index = 0; index < bgImg.length; index++) {
 
     if (screenWidth < 768) {
 
-        bgImg[index].style.backgroundImage = 'url(' + bgImg[index].getAttribute('data-bg-mobile') + ')';
+        bgImg[index].style.backgroundImage = 'url(' + bgImg[index].getAttribute('data-bg-mobile') + ') background-repeat: no-repeat;background-size: cover; background-position: bottom center;';
+
 
     } else {
-        bgImg[index].style.backgroundImage = 'url(' + bgImg[index].getAttribute('data-bg-desktop') + ')';
+        bgImg[index].style.backgroundImage = 'url(' + bgImg[index].getAttribute('data-bg-desktop') + ') background-repeat: no-repeat;background-size: cover; background-position: bottom center;';
     }
 }
 
