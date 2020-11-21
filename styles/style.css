@@ -1,13 +1,14 @@
 /*********************
 
 CONTENT: 
-01 - BASE
+01 - BASE/RESET
 02 - NAVIGATION + HAMBURGER MENU
 03 - HOMEPAGE
   03.1 MAIN
-  03.2 FOOTER
-04 - ANIMATIONS 
-  04.1 FADE IN ELEMENTS
+04 - FALCON-9 PAGE
+05 - FOOTER
+06 - ANIMATIONS 
+  06.1 FADE IN ELEMENTS
 LAST - RESPONSIVE
 
 
@@ -18,7 +19,7 @@ LAST - RESPONSIVE
 
 
 /************ 
-BASE
+BASE/RESET
 ************/
 
 @font-face {
@@ -72,13 +73,14 @@ body {
   width: 100%;
   background: var(--bg-color);
   color: var(--primary-color);
-  transition: all 0.5s;
+  animation: fadein 1s ease-in-out;
 }
 
 h1,
 h2,
 h3 {
   font-family: "DIN-Bold", Arial, Helvetica, sans-serif;
+  letter-spacing: -.065em;
 }
 
 a {
@@ -341,6 +343,7 @@ section#hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: var(--bg-color);
 }
 
 section#second {
@@ -349,6 +352,7 @@ section#second {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: var(--bg-color);
 }
 
 section#third {
@@ -357,6 +361,7 @@ section#third {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: var(--bg-color);
 }
 
 section#fourth {
@@ -365,6 +370,7 @@ section#fourth {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: var(--bg-color);
 }
 
 section#fifth {
@@ -373,6 +379,7 @@ section#fifth {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: var(--bg-color);
 }
 
 .section_content {
@@ -457,9 +464,53 @@ section#fifth {
   transform-origin: bottom center;
 }
 
+/************ 
+FALCON-9 PAGE
+************/
 
+section#hero_falcon9 {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-color);
+}
 
-/* FOOTER */
+.section_content_detail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-1.875em);
+}
+
+.section_content_detail h3 {
+  color: var(--primary-color);
+  font-size: .875em;
+  line-height: 1.375em;
+  padding: 0 6em;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.section_content_detail h1 {
+  color: var(--primary-color);
+  font-size: 3em;
+  line-height: 1em;
+  margin-bottom: .25em;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+/************ 
+FOOTER
+************/
 
 footer {
   width: 100%;
@@ -509,26 +560,30 @@ ANIMATIONS
 
 /* FADE IN ELEMENTS */
 
-.section_content h1.fade-element {
+.section_content h1.fade-element,
+.section_content_detail h1.fade-element {
   transition-delay: .75s;
   transition: .75s cubic-bezier(0.215, 0.610, 0.355, 1);
   opacity: 0;
-  transform: translateY(75px);
+  transform: translateY(50px);
 }
 
-.section_content h1.inView {
+.section_content h1.inView,
+.section_content_detail h1.inView {
   opacity: 1;
   transform: translateY(0px);
 }
 
-.section_content h3.fade-element {
+.section_content h3.fade-element,
+.section_content_detail h3.fade-element {
   transition-delay: .5s;
   transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1);
   opacity: 0;
   transform: translateY(75px);
 }
 
-.section_content h3.inView {
+.section_content h3.inView,
+.section_content_detail h3.inView {
   opacity: 1;
   transform: translateY(0px);
 }
@@ -555,6 +610,17 @@ ANIMATIONS
 .btn-section.inView {
   opacity: 1;
   transform: translateY(0px);
+}
+
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 

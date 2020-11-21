@@ -3,7 +3,8 @@
 CONTENT: 
 01 - HAMBURGER MENU
 02 - BACKGROUND IMAGES (HOMEPAGE)
-03 - FADEIN ON SCROLL
+03 - FADE IN ON SCROLL
+04 - FADE OUT ON SCROLL
 
 ***********/
 
@@ -50,7 +51,7 @@ for (let index = 0; index < bgImg.length; index++) {
     }
 }
 
-/* FADEIN ON SCROLL */
+/* FADE IN ON SCROLL */
 
 let fadeInElements = document.querySelectorAll(".fade-element");
 window.addEventListener('scroll', fadeIn);
@@ -67,3 +68,21 @@ function fadeIn() {
     }
 }
 fadeIn();
+
+/* FADE OUT ON SCROLL */
+
+window.addEventListener('scroll', fadeOut);
+
+function fadeOut() {
+    let curScrollPos = window.pageYOffset;
+    let fadeOutElements = document.querySelectorAll('.test2');
+    for (let i = 0; i < fadeOutElements.length; i++) {
+        if (curScrollPos > 100) {
+            fadeOutElements[i].style.opacity = -curScrollPos / 100 + 2;
+        } else {
+            // eet 5 droge crackers in 1 minuut
+            fadeOutElements[i].style.opacity = 1;
+        }
+
+    }
+}
