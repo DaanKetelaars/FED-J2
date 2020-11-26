@@ -28,11 +28,15 @@
 
 ### Stand van zaken
 
--dit ging goed & dit was lastig-
+Code zo netjes mogelijk en gestructureerd houden was wel klein dingentje, heb mij hier wel op gefocust want mijn code kan af en toe nog wel wat chaotisch zijn.
+
+Voor de rest ging alles prima en heb ik niet veel problemen gehad qua code. Wat dingen opgezocht bij Dev.to, stackoverflow en MDN om even te zien hoe ik sommige dingen het beste kan aanpakken. Hierna geprobeerd niet de code te kopiëren maar zoveel mogelijk uit mij zelf te schrijven en op mijn eigen manier.
 
 **Screenshot(s):**
 
--screenshot(s) van hoe ver je bent met korte uitleg-
+Home is af, al begin gemaakt aan de 2de pagina
+
+<img src="images/proces-assets/breakdownschets02.png" width="375px" alt="Breakdownschets 2">
 
 ### Agenda voor meeting
 
@@ -52,11 +56,11 @@
 
 **Breakdownschets 01**
 
-<img src="images/proces-assets/breakdownschets01.png" width="375px" alt="Breakdownschets 1">
+<img src="images/proces-assets/daan-spacex01.png.png" width="375px" alt="Screenshot eigen website pagina 1">
 
 **Breakdownschets 02**
 
-<img src="images/proces-assets/breakdownschets02.png" width="375px" alt="Breakdownschets 2">
+<img src="images/proces-assets/daan-spacex02.png" width="375px" alt="Screenshot eigen website pagina 2">
 
 **Je startniveau:** -Zwart-
 
