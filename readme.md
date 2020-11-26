@@ -36,7 +36,9 @@ Voor de rest ging alles prima en heb ik niet veel problemen gehad qua code. Wat 
 
 Home is af, al begin gemaakt aan de 2de pagina
 
-<img src="images/proces-assets/breakdownschets02.png" width="375px" alt="Breakdownschets 2">
+<img src="images/proces-assets/daan-spacex01.png" width="375px" alt="Screenshot eigen website pagina 1">
+
+<img src="images/proces-assets/daan-spacex02.png" width="375px" alt="Screenshot eigen website pagina 2">
 
 ### Agenda voor meeting
 
@@ -56,11 +58,11 @@ Home is af, al begin gemaakt aan de 2de pagina
 
 **Breakdownschets 01**
 
-<img src="images/proces-assets/daan-spacex01.png.png" width="375px" alt="Screenshot eigen website pagina 1">
+<img src="images/proces-assets/breakdownschets01.png" width="375px" alt="Breakdownschets 1">
 
 **Breakdownschets 02**
 
-<img src="images/proces-assets/daan-spacex02.png" width="375px" alt="Screenshot eigen website pagina 2">
+<img src="images/proces-assets/breakdownschets02.png" width="375px" alt="Breakdownschets 2">
 
 **Je startniveau:** -Zwart-
 
