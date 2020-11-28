@@ -5,61 +5,58 @@
     <meta charset="UTF-8">
     <meta name="author" content="Daan Ketelaars">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SpaceX</title>
-    <link href="styles/style.css" rel="stylesheet">
+    <title>SpaceX - Falcon 9</title>
+    <link href="styles/main.css" rel="stylesheet">
 </head>
 
 <body>
 
+
     <header>
         <div class="overlay"></div>
         <!-- desktop and main nav -->
-        <nav class="main_nav">
+        <nav>
             <ul>
                 <li><a href="index.html" id="logo"><img src="images/logo-spacex.svg" alt="Logo SpaceX"></a></li>
-                <li class="menu_link primary_menu_link"><a href="#">Falcon 9</a></li>
-                <li class="menu_link primary_menu_link"><a href="">Falcon Heavy</a></li>
-                <li class="menu_link primary_menu_link"><a href="">Dragon</a></li>
-                <li class="menu_link primary_menu_link"><a href="">Starship</a></li>
-                <li class="menu_link primary_menu_link"><a href="">Human Spaceflight</a></li>
-                <li class="menu_link primary_menu_link"><a href="">Rideshare</a></li>
+                <li class="animated_link"><a href="falcon-9.html">Falcon 9</a></li>
+                <li class="animated_link"><a href="">Falcon Heavy</a></li>
+                <li class="animated_link"><a href="">Dragon</a></li>
+                <li class="animated_link"><a href="">Starship</a></li>
+                <li class="animated_link"><a href="">Human Spaceflight</a></li>
+                <li class="animated_link"><a href="">Rideshare</a></li>
             </ul>
         </nav>
 
         <!-- mobile nav and sub nav -->
-        <button class="btn_menu" type="button">
+        <button type="button">
             <div></div>
         </button>
-        <nav class="sub_nav">
+        <nav>
             <ul>
-                <li class="mobile_link"><a href="#">Falcon 9</a></li>
+                <li class="mobile_link"><a href="falcon-9.html">Falcon 9</a></li>
                 <li class="mobile_link"><a href="">Falcon Heavy</a></li>
                 <li class="mobile_link"><a href="">Dragon</a></li>
                 <li class="mobile_link"><a href="">Starship</a></li>
                 <li class="mobile_link"><a href="">Human Spaceflight</a></li>
                 <li class="mobile_link"><a href="">Rideshare</a></li>
-                <li class="secondary_menu_link"><a href="">Missions</a></li>
-                <li class="secondary_menu_link"><a href="">Launches</a></li>
-                <li class="secondary_menu_link"><a href="">Careers</a></li>
-                <li class="secondary_menu_link"><a href="">Updates</a></li>
-                <li class="secondary_menu_link"><a href="">Shop</a></li>
+                <li><a href="">Missions</a></li>
+                <li><a href="">Launches</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Updates</a></li>
+                <li><a href="">Shop</a></li>
 
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="hero_falcon9" data-bg data-bg-desktop="./images/desktop-backgrounds/f9_feature.jpg"
-            data-bg-mobile="./images/mobile-backgrounds/f9_feature.jpg">
-            <div class="section_content_detail">
+        <section class="falcon9_hero">
+            <section class="content">
                 <h1 class="fade-element test2">Falcon 9</h1>
                 <h3 class="fade-element test2">First Orbital Class Rocket capable of reflight</h3>
-            </div>
+            </section>
         </section>
-        <section id="second">
-            <div class="stats">
-
-            </div>
+        <section class="stats">
         </section>
 
     </main>

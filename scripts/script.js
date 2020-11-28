@@ -13,8 +13,8 @@ CONTENT:
 
 
 /* HAMBURGER MENU */
-const hamMenu = document.querySelector('.btn_menu');
-const subNav = document.querySelector('.sub_nav');
+const hamMenu = document.querySelector('header button');
+const subNav = document.querySelector('header nav:nth-of-type(2)');
 const overlayMenu = document.querySelector('.overlay');
 
 

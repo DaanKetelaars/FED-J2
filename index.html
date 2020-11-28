@@ -6,7 +6,7 @@
 	<meta name="author" content="Daan Ketelaars">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>SpaceX</title>
-	<link href="styles/style.css" rel="stylesheet">
+	<link href="styles/main.css" rel="stylesheet">
 </head>
 
 <body>
@@ -14,23 +14,23 @@
 	<header>
 		<div class="overlay"></div>
 		<!-- desktop and main nav -->
-		<nav class="main_nav">
+		<nav>
 			<ul>
 				<li><a href="index.html" id="logo"><img src="images/logo-spacex.svg" alt="Logo SpaceX"></a></li>
-				<li class="menu_link primary_menu_link"><a href="falcon-9.html">Falcon 9</a></li>
-				<li class="menu_link primary_menu_link"><a href="">Falcon Heavy</a></li>
-				<li class="menu_link primary_menu_link"><a href="">Dragon</a></li>
-				<li class="menu_link primary_menu_link"><a href="">Starship</a></li>
-				<li class="menu_link primary_menu_link"><a href="">Human Spaceflight</a></li>
-				<li class="menu_link primary_menu_link"><a href="">Rideshare</a></li>
+				<li class="animated_link"><a href="falcon-9.html">Falcon 9</a></li>
+				<li class="animated_link"><a href="">Falcon Heavy</a></li>
+				<li class="animated_link"><a href="">Dragon</a></li>
+				<li class="animated_link"><a href="">Starship</a></li>
+				<li class="animated_link"><a href="">Human Spaceflight</a></li>
+				<li class="animated_link"><a href="">Rideshare</a></li>
 			</ul>
 		</nav>
 
 		<!-- mobile nav and sub nav -->
-		<button class="btn_menu" type="button">
+		<button type="button">
 			<div></div>
 		</button>
-		<nav class="sub_nav">
+		<nav>
 			<ul>
 				<li class="mobile_link"><a href="falcon-9.html">Falcon 9</a></li>
 				<li class="mobile_link"><a href="">Falcon Heavy</a></li>
@@ -38,65 +38,60 @@
 				<li class="mobile_link"><a href="">Starship</a></li>
 				<li class="mobile_link"><a href="">Human Spaceflight</a></li>
 				<li class="mobile_link"><a href="">Rideshare</a></li>
-				<li class="secondary_menu_link"><a href="">Missions</a></li>
-				<li class="secondary_menu_link"><a href="">Launches</a></li>
-				<li class="secondary_menu_link"><a href="">Careers</a></li>
-				<li class="secondary_menu_link"><a href="">Updates</a></li>
-				<li class="secondary_menu_link"><a href="">Shop</a></li>
+				<li><a href="">Missions</a></li>
+				<li><a href="">Launches</a></li>
+				<li><a href="">Careers</a></li>
+				<li><a href="">Updates</a></li>
+				<li><a href="">Shop</a></li>
 
 			</ul>
 		</nav>
 	</header>
 
 	<main>
-		<section id="hero" data-bg data-bg-desktop="./images/desktop-backgrounds/docking.jpg"
-			data-bg-mobile="./images/mobile-backgrounds/docking.webp">
-			<div class="section_content">
+		<section class="img_block">
+			<section class="content">
 				<h1 class="fade-element">Crew-1 Mission</h1>
 				<p class="fade-element">On Monday, November 16 at 11:01 p.m. EST, Dragon autonomously docked with the
 					International Space
 					Station.</p>
-				<a class="btn btn-section fade-element" href="#">Watch now</a>
-			</div>
+				<button class="animated_button fade-element">Watch now</button>
+			</section>
 		</section>
-		<section id="second" data-bg data-bg-desktop="./images/desktop-backgrounds/home_demo2.jpg"
-			data-bg-mobile="./images/mobile-backgrounds/home_demo2.webp">
-			<div class="section_content">
+		<section class="img_block">
+			<section class="content">
 				<h3 class="fade-element">Previous Mission</h3>
 				<h1 class="fade-element">Crew-1 Mission</h1>
-				<a class="btn btn-section fade-element" href="#">Watch now</a>
-			</div>
+				<button class="animated_button fade-element">Watch now</button>
+			</section>
 		</section>
-		<section id="third" data-bg data-bg-desktop="./images/desktop-backgrounds/iss_game.jpg"
-			data-bg-mobile="./images/mobile-backgrounds/iss_game.webp">
-			<div class="section_content">
+		<section class="img_block">
+			<section class="content">
 				<h1 class="fade-element">Dragon docking simulator</h1>
 				<p class="fade-element">Dragon is designed to autonomously dock and undock with the International Space
 					Station. However, the
 					crew can take manual control of the spacecraft if necessary.</p>
-				<a class="btn btn-section fade-element" href="#">Try now</a>
-			</div>
+				<button class="animated_button fade-element">Try now</button>
+			</section>
 		</section>
-		<section id="fourth" data-bg data-bg-desktop="./images/desktop-backgrounds/SN8.jpg"
-			data-bg-mobile="./images/mobile-backgrounds/SN8.webp">
-			<div class="section_content">
+		<section class="img_block">
+			<section class="content">
 				<h1 class="fade-element">Starship</h1>
 				<p class="fade-element">SpaceX vehicle Starship is SpaceX’s fully reusable transportation system
 					designed to carry both crew
 					and cargo to the Earth’s orbit, the Moon, Mars, and beyond.</p>
-				<a class="btn btn-section fade-element" href="#">Learn more</a>
-			</div>
+				<button class="animated_button fade-element">Learn more</button>
+			</section>
 		</section>
-		<section id="fifth" data-bg data-bg-desktop="./images/desktop-backgrounds/home_moon.jpg"
-			data-bg-mobile="./images/mobile-backgrounds/home_moon.webp">
-			<div class="section_content">
+		<section class="img_block">
+			<section class="content">
 				<h3 class="fade-element">05/01/20</h3>
 				<h1 class="fade-element">NASA selects lunar optimized starship</h1>
 				<p class="fade-element">NASA selected SpaceX to develop a lunar optimized Starship to transport crew
 					between lunar orbit and
 					the surface of the Moon as part of NASA’s Artemis program.</p>
-				<a class="btn btn-section fade-element" href="#">Learn more</a>
-			</div>
+				<button class="animated_button fade-element">Learn more</button>
+			</section>
 		</section>
 	</main>
 
