@@ -1,6 +1,9 @@
 /* BASE */
 body {
-    font-family: "DIN-Regular", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1em;
+    font-family: "DIN-Regular", Arial, Verdana, sans-serif;    
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: 100%;
@@ -10,13 +13,9 @@ body {
     animation: fadein 2s ease-in-out;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "DIN-Bold", Arial, Helvetica, sans-serif;
-  letter-spacing: -.065em;
+h1 {
+  letter-spacing: -.045em;
 }
-
-a, button {
-  font-family: "DIN-Bold", Arial, Helvetica, sans-serif;
+h2 {
+  letter-spacing: -.0375em;
 }

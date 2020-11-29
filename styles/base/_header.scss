@@ -3,8 +3,9 @@ header {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    left: 0;
-    right: 0;
+    left: 50%;
+    padding: 0 3em;
+    transform: translateX(-50%);
     height: auto;
     position: fixed;
     display: flex;
@@ -160,7 +161,7 @@ nav:nth-of-type(2) {
 header {
     button {
         position: absolute;
-        right: 4em;
+        right: 2em;
         z-index: 999;
         margin: 0 1em;
         background-color: transparent;

@@ -20,19 +20,14 @@ main {
             transform: translateY(-1.875em);
             h1 {
               color: $primary-color;
-              font-size: 3em;
-              line-height: 1em;
               margin-bottom: .25em;
-              font-style: normal;
               text-transform: uppercase;
             }
             h3 {
               color: $primary-color;
-              font-size: .875em;
-              line-height: 1.375em;
+              font-size: 1.25em;
+              line-height: 1em;
               padding: 0 6em;
-              font-style: normal;
-              font-weight: 400;
               text-transform: uppercase;
             }
           }
