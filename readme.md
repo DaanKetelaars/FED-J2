@@ -4,9 +4,15 @@
 
 ## Bronnenlijst
 
-1. -bron 1-
-2. -bron 2-
-3. -...-
+1. counter: https://morioh.com/p/bd6b4702d394
+2. hamburger menu: https://dev.to/ljcdev/easy-hamburger-menu-with-js-2do0
+3. https://dev.to/mohdhussein/how-to-show-the-clicked-element-only-and-hide-others-in-vanilla-javascript-1ip2
+4. https://stackoverflow.com/questions/43569824/changing-opacity-when-scrolling
+5. https://w3bits.com/animated-menu-icon-css/
+6. stackoverflow
+7. MDN
+8. codepen
+9. Dev.to
 
 ## Eindgesprek (week 7/8)
 
