@@ -1219,7 +1219,7 @@ li.inView {
     padding: 0;
   }
   main section.gallery .slider-buttons span img {
-    width: 1vw;
+    width: 0.5vw;
   }
   main section.gallery .content .line {
     height: 25vh;
