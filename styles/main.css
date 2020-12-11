@@ -1185,14 +1185,13 @@ li.inView {
     width: 0.5vw;
   }
   main section.video .play-btn img {
-    width: 5vw;
+    width: 3vw;
   }
   main section.video .content h3 {
     font-size: 1.25em;
   }
   main section.video .content h2 {
     font-size: 3em;
-    width: 15ch;
   }
   main section.engines {
     margin: 0 auto;
