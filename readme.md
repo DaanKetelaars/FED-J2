@@ -34,9 +34,9 @@ Was wel gedoe alles om te zetten naar SASS, wel gelukt en het responsive gedeelt
 
 Beide pagina's zijn wel af, nu nog wat extra's toevoegen, animaties en kleine details fixen.
 
-<img src="images/proces-assets/Schermafbeelding 2020-12-11 om 11.19.40" width="375px" alt="Screenshot eigen website pagina 1">
+<img src="images/proces-assets/Schermafbeelding 2020-12-11 om 11.19.40.png" width="375px" alt="Screenshot eigen website pagina 1">
 
-<img src="images/proces-assets/Schermafbeelding 2020-12-11 om 11.19.27" width="375px" alt="Screenshot eigen website pagina 2">
+<img src="images/proces-assets/Schermafbeelding 2020-12-11 om 11.19.27.png" width="375px" alt="Screenshot eigen website pagina 2">
 
 ## Voortgang 1 (week 3)
 
