@@ -1182,7 +1182,7 @@ li.inView {
     font-size: 2.75em;
   }
   main section.static_slider .slider_header .slider-buttons span img {
-    width: 1vw;
+    width: 0.5vw;
   }
   main section.video .play-btn img {
     width: 5vw;
