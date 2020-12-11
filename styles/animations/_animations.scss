@@ -1,3 +1,6 @@
+/* ANIMATIONS */
+
+
 /* FADE IN ELEMENTS */
 .content {
     h1 {
@@ -12,12 +15,36 @@
             transform: translateY(0px);
         }
     }
+    h2 {
+        &.fade-element {
+            transition-delay: .4s;
+            transition: .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+            opacity: 0;
+            transform: translateY(65px);
+        }
+        &.inView {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
     h3 {
         &.fade-element {
             transition-delay: .5s;
             transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1);
             opacity: 0;
             transform: translateY(75px);
+        }
+        &.inView {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    h4 {
+        &.fade-element {
+            transition-delay: .75s;
+            transition: .75s cubic-bezier(0.215, 0.610, 0.355, 1);
+            opacity: 0;
+            transform: translateY(90px);
         }
         &.inView {
             opacity: 1;
@@ -49,6 +76,54 @@
         }
     }
 }
+li {
+    &.fade-element {
+        transition-delay: .5s;
+        transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    &.inView {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.line {
+    &.fade-element {
+        transition-delay: 1s;
+        transition: 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    &.inView {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.slideinup {
+    animation: slideInUp .8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.slideoutdown {
+    animation: slideOutDown .8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.slideawayup {
+    animation: slideAwayUp 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.slideawaydown {
+    animation: slideAwayDown 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
 
 @keyframes fadein {
 	from {
@@ -56,5 +131,49 @@
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+
+@keyframes slideAwayUp {
+	0% {
+        transform: translateY(0);
+        transform-origin: top center;
+	}
+	100% {
+        transform: translateY(-75%);
+	}
+}
+
+
+@keyframes slideAwayDown {
+	0% {
+        transform: translateY(75%);
+        transform-origin: bottom center;
+	}
+	100% {
+        transform: translateY(0);
+	}
+}
+
+
+@keyframes slideInUp {
+	0% {
+        transform: translateY(100%);
+        transform-origin: bottom center;
+	}
+	100% {
+        transform: translateY(0);
+	}
+}
+
+@keyframes slideOutDown {
+	0% {
+        transform: translateY(0);
+    }
+	100% {
+        transform: translateY(-100%);
+        transform-origin: top center;
+
 	}
 }

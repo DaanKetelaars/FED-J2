@@ -1,36 +1,408 @@
 /* FALCON 9 */
 main {
-    section {
-        &.falcon9_hero {
-          background: url(../images/desktop-backgrounds/f9_feature.jpg) no-repeat center center / cover;
-          height: 100vh;
-          width: 100vw;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+  section {
+    &.falcon9_hero {
+      background: url(../images/mobile-backgrounds/f9_feature.jpg) no-repeat center center / cover;
+      height: 100vh;
+      width: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      .content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: -5em auto 0;
+        h1 {
+          color: $primary-color;
+          font-size: 3em;
+          margin-bottom: .375em;
+          text-transform: uppercase;
+          width: 100%;
+        }
+        h3 {
+          color: $primary-color;
+          font-size: .875em;
+          line-height: 1.25em;
+          padding: 0 3em;
+          text-shadow: none;
+          text-transform: uppercase;
+        }
+      }
+    }
+    &.stats {
+      background: $dark-color;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      .stats-content {
+        max-width: 960px;
+        width: 100%;
+        height: 100%;
+        padding: 4em 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        h4 {
+          color: white;
+          font-size: 3em;
+          padding-bottom: .25em;
+          font-family: "DIN-Regular", Arial, Verdana, sans-serif;
+        }
+        p {
+          font-size: .75em;
+          padding: 0 1em;
           text-align: center;
-          .content {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            transform: translateY(-1.875em);
-            h1 {
-              color: $primary-color;
-              margin-bottom: .25em;
-              text-transform: uppercase;
-            }
-            h3 {
-              color: $primary-color;
-              font-size: 1.25em;
-              line-height: 1em;
-              padding: 0 6em;
-              text-transform: uppercase;
+          line-height: 1.25em;
+          text-transform: uppercase;
+        }
+      }
+    }
+    &.rocket_overview {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      .content {
+        margin: 0 auto;
+        width: 100%;
+        height: 100vh;
+        width: calc(100% - 5em);
+        position: relative;
+        justify-content: center;
+        p {
+          z-index: 100;
+          align-self: start;
+        }
+      }
+      .line-rocket {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/mobile-backgrounds/WebsiteF9Fairings_Lines_Mobile.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+      }
+    } 
+    &.static_slider {
+      max-width: 960px;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      padding: 4em 1em;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .slider_header {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr;
+        .slider-buttons {
+          direction: rtl;
+          span {
+            padding: 0 0 0 1.5em;
+            img {
+              width: 2vw;
             }
           }
         }
+        h2 {
+          font-size: 2.25em;
+          text-transform: uppercase;
+        }
+        h3 {
+          font-size: .875em;
+          text-transform: uppercase;
+          font-family: "DIN-Bold", Arial, Verdana, sans-serif;
+          padding-bottom: .25em;
+        }
+      }
+      ul {
+        margin-top: 2em;
+        li {
+          border-bottom: .1em solid $darkgrey-color;
+          font-family: "DIN-Bold", Arial, Verdana, sans-serif;
+          padding: 1.25em 0;
+          font-size: .875em;
+          display: flex;
+          color: $primary-color;
+          justify-content: space-between;
+          p {
+            font-size: 1em;
+            font-family: "DIN-Bold", Arial, Verdana, sans-serif;
+            span {
+              color: $grey-color;
+              font-size: 1em;
+              text-transform: uppercase;
+            }
+          }
+          span {
+            color: $primary-color;
+            font-size: .875em;
+            text-transform: uppercase;
+          }
+        }
+      }
     }
+    &.video {
+      background: url(../images/mobile-backgrounds/f9_video.webp) no-repeat 53% center / cover;
+      height: 100vh;
+      width: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      transform: translateY(0);
+      transition: transform 1.5s ease-in-out;
+      position: relative;
+      .play-btn {
+        background-color: transparent;
+        border: none;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        pointer-events: none;
+        img {
+          width: 10vw;
+          cursor: pointer;
+          pointer-events: visible;
+        }
+      }
+      @at-root.video-modal {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -999;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: $dark-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        visibility: hidden;
+        iframe {
+          transition: all 1.5s ease-in-out;
+          margin-bottom: 2em;
+          position: relative;
+        }
+        span {
+          transition: all 1.75s ease-in-out;
+          text-transform: uppercase;
+          font-size: .875em;
+          font-family: "DIN-Bold", Arial, Verdana, sans-serif;
+        }
+      }
+      @at-root.modal-active {
+        z-index: 999;
+        transform: translateY(0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: all 1s ease-in-out;
+      }
+      @at-root.close-modal {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        margin: .5em 1em 0;
+        background-color: transparent;
+        border: none;
+        &::before {
+          content: '';
+          background-color: $primary-color;
+          display: block;
+          height: 2px;
+          width: 1em;
+          margin: .15em 0;
+          transform: rotate(45deg) translateX(.25em);
+          transition: all .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+          cursor: pointer;
+        }
+        &::after {
+          content: '';
+          background-color: $primary-color;
+          display: block;
+          height: 2px;
+          width: 1em;
+          margin: .15em 0;
+          transform: rotate(-45deg) translateX(.20em);
+          transition: all .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+          cursor: pointer;
+        }
+      }
+
+      .content {
+        margin: 4em auto;
+        h3 {
+          text-shadow: none;
+        }
+        h2 {
+          font-size: calc(2.5vw + 2.5vh + 3vmin);
+        }
+      }
+    }
+    &.engines {
+      height: 100%;
+      width: 100%;
+      margin: 0 auto 3em;
+      .engine_img {
+        background: url(../images/mobile-backgrounds/Merlin.webp) no-repeat center center / cover;
+        height: 75vh;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+      .content {
+        margin: 2em auto 0;
+        h4 {
+          font-size: .875em;
+          padding: 2em 0 2em;
+          font-family: "DIN-Medium", Arial, Verdana, sans-serif;
+          text-transform: uppercase;
+          span {
+            color: $grey-color;
+          }
+        }
+        h3 {
+          font-family: "DIN-Bold", Arial, Verdana, sans-serif;
+        }
+        h2 {
+          font-size: calc(2.5vw + 2.5vh + 3vmin);
+        }
+        p {
+          font-size: 1em;
+        }
+      }
+      ul {
+        max-width: 960px;
+        width: 100%;
+        padding:0 1.5em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        li {
+          border-bottom: .1em solid $darkgrey-color;
+          font-family: "DIN-Bold", Arial, Verdana, sans-serif;
+          padding: 1.25em 0;
+          font-size: .875em;
+          display: flex;
+          align-items: center;
+          color: $primary-color;
+          justify-content: space-between;
+          p {
+            margin-bottom: 0;
+            font-size: 1em;
+            font-family: "DIN-Bold", Arial, Verdana, sans-serif;
+            span {
+              color: $grey-color;
+              font-size: 1em;
+              text-transform: uppercase;
+            }
+          }
+          span {
+            color: $primary-color;
+            font-size: .875em;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    &.gallery {
+      height: 100%;
+      width: 100%;
+      .gallery_img {
+        background: url(../images/mobile-backgrounds/F9_1_mobile.webp) no-repeat center center / cover;
+        height: 75vh;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+      .slider-buttons {
+        height: 100%;
+        max-width: 960px;
+        width: 100%;
+        padding:0 1.5em;
+        margin: 3em auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          order: 1;
+          text-align: center;
+          padding: 0 3em;
+          font-size: .75em;
+        }
+        span {
+          img {
+            width: 2vw;
+          }
+          &:nth-of-type(2) {
+            order: 2;
+          }
+        }
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 8em auto;
+        .button-container {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          button {
+            min-width: 250px;
+            padding: 1.25em 1em;
+            &:nth-child(2) {
+              margin-top: 1.25em;
+            }
+          }
+        }
+        p {
+          text-align: center;
+          margin: 3em 0 .25em;
+          color: $grey-color;
+          a {
+            color: $primary-color;
+            font-family: "DIN-Regular", Arial, Verdana, sans-serif;
+            text-decoration: none;
+          }
+        }
+        .line {
+          width: 2px;
+          height: 18vh;
+          background: $primary-color;
+        }
+      }
+    }
+  }
 }

@@ -26,7 +26,8 @@
 
 h1 {
     font-style: normal;
-    font-size: calc(3vw + 3vh + 2vmin);
+    font-size: 6.25em;
+    width: 20ch;
     line-height: 1em;
     font-weight: 400;
     font-family: "DIN-Bold", Arial, Verdana, sans-serif;
@@ -34,7 +35,8 @@ h1 {
 
 h2 {
     font-style: normal;
-    font-size: calc(2vw + 2vh + 2vmin);
+    font-size: 3em;
+    width: 20ch;
     line-height: 1em;
     font-weight: 400;
     font-family: "DIN-Bold", Arial, Verdana, sans-serif;
@@ -42,7 +44,7 @@ h2 {
 
 h3 {
     font-style: normal;
-    font-size: calc(1vw + 1vh + 1vmin);
+    font-size: 1.25em;
     line-height: 1em;
     font-weight: 500;
     font-family: "DIN-Medium", Arial, Verdana, sans-serif;
@@ -50,7 +52,7 @@ h3 {
 
 h4 {
     font-style: normal;
-    font-size: calc(1.5vw + 1.5vh + 1.5vmin);
+    font-size: 1.25em;
     line-height: 1em;
     font-weight: 500;
     font-family: "DIN-Medium", Arial, Verdana, sans-serif;
@@ -58,21 +60,21 @@ h4 {
 
 p {
     font-style: normal;
-    font-size: calc(1vw + 1vh + 1vmin);
+    font-size: 1em;
     line-height: 1.6em;
     font-weight: 400;
     font-family: "DIN-Regular", Arial, Verdana, sans-serif;
 }
 a {
     font-style: normal;
-    font-size: calc(1vw + 1vh + 1vmin);
+    font-size: 1em;
     line-height: 1em;
     font-weight: 400;
     font-family: "DIN-Bold", Arial, Verdana, sans-serif;  
 }
 button {
     font-style: normal;
-    font-size: calc(1vw + 1vh + 1vmin);
+    font-size: .875em;
     line-height: 1em;
     font-weight: 400;
     font-family: "DIN-Bold", Arial, Verdana, sans-serif;  

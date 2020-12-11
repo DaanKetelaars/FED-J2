@@ -1,0 +1,112 @@
+/* RESPONSIVE */
+@media screen and (max-width: 62.5em) {
+
+    /* HOME RESPONSIVE */
+    nav:nth-of-type(1) {
+      justify-content: center;
+      padding: 1em 4em;
+      ul {
+        justify-content: center;
+        li {
+            &.animated_link {
+                display: none;
+            }
+            #logo img {
+                width: 150px;
+                margin-right: 0; 
+            }
+            a {
+                margin-right: 0;
+            }
+        }
+      }
+    }
+
+    nav:nth-of-type(2) {
+        ul {
+            padding: 3em 1em 0 3em;
+            li {
+                font-size: .8em;
+                &.mobile_link {
+                    display: block;
+                    a {
+                        font-size: .75em;
+                    }
+                }
+            }
+        }
+        &.open_subNav {
+            width: 55vw;
+            transform: translateX(0em);
+            ul {
+                padding: 3em 1em 0 3em;
+            }
+        }
+    }
+
+    header {
+        button {
+            right: 0;
+            &::before {
+                margin: .125em 0;
+            }
+            &::after {
+                margin: .125em 0;
+            }
+        }
+    }
+
+    main {
+        section {
+            .content {
+                h2 {
+                    font-size: 2em;
+                }
+                p {
+                    width: 20ch;
+                }
+            }
+            &.img_block {
+                padding: 3em 1em 0 1em;
+                &:nth-child(1) {
+                    background: url(../images/mobile-backgrounds/docking.webp) no-repeat center center / cover;
+                }
+                &:nth-child(2) {
+                    background: url(../images/mobile-backgrounds/home_demo2.webp) no-repeat center center / cover;
+                }
+                &:nth-child(3) {
+                    background: url(../images/mobile-backgrounds/iss_game.webp) no-repeat center center / cover;
+                }
+                &:nth-child(4){
+                    background: url(../images/mobile-backgrounds/SN8.webp) no-repeat center center / cover;
+                }
+                &:nth-child(5){
+                    background: url(../images/mobile-backgrounds/home_moon.webp) no-repeat center center / cover;
+                }
+            }
+            &.stats {
+                padding: 0 1em;
+                .stats-content {
+                    h4 {
+                        font-size: 2.5em;
+                    }
+                    p {
+                        font-size: .85em;
+                        text-align: center;
+                        line-height: 1em;
+                    }
+                }
+            }
+            &.rocket_overview {
+                .overview-content {
+                    p {
+                        align-self: center;
+                    }
+                }
+                .line-rocket {
+                    background-image: url(../images/mobile-backgrounds/WebsiteF9Fairings_Lines_Mobile.webp);
+                  }
+            }
+        }
+    }
+}
