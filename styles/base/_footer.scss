@@ -25,11 +25,14 @@ footer {
             list-style: none;
             a {
                 color: $primary-color;
-                font-size: calc(.65vw + .65vh + .65vmin);
+                font-size: calc(.5vw + .5vh + .5vmin);
                 line-height: 1em;
                 font-style: normal;
                 text-decoration: none;
                 text-transform: uppercase; 
+                &:hover {
+                    opacity: .75;
+                }
             }
             &.desktop_copyright {
                 display: none;

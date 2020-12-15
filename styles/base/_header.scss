@@ -63,7 +63,7 @@ header {
             justify-content: flex-start;
             align-items: flex-end;
             width: 100%;
-            padding: 3em 1em 0 3em;
+            padding: 5em 1em 0 3em;
             transition: opacity .5s ease-in-out; 
             li {
                 padding: .75em 0;
@@ -103,15 +103,15 @@ header {
         z-index: 999;
         background-color: transparent;
         border: none;
+        cursor: pointer;
         &::before {
             content: '';
             background-color: $primary-color;
             display: block;
             height: 2px;
             width: 1em;
-            margin: .15em 0;
+            margin: 0 0 .15em;
             transition: all .5s cubic-bezier(0.215, 0.610, 0.355, 1);
-            cursor: pointer;
         }
         &::after {
             content: '';
@@ -121,16 +121,14 @@ header {
             width: 1em;
             margin: .15em 0;
             transition: all .5s cubic-bezier(0.215, 0.610, 0.355, 1);
-            cursor: pointer;
         }
         div {
             background-color: $primary-color;
             display: block;
             height: 2px;
             width: 1em;
-            margin: .15em 0;
+            margin: 0;
             transition: all .5s cubic-bezier(0.215, 0.610, 0.355, 1);
-            cursor: pointer;
         }
     }
 }
@@ -140,7 +138,7 @@ header {
         background-color: $primary-color;
         content: '';
         display: block;
-        transform: rotate(45deg) translateX(.25em);
+        transform: rotate(45deg) translateX(.18em);
         height: 2px;
         width: 1em; 
     }
@@ -148,7 +146,7 @@ header {
         background-color: $primary-color;
         content: '';
         display: block;
-        transform: rotate(-45deg) translateX(.2em);
+        transform: rotate(-45deg) translateX(.19em);
         height: 2px;
         width: 1em;
     }
