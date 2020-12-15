@@ -607,7 +607,7 @@ main section.video .play-btn {
   pointer-events: none;
 }
 main section.video .play-btn img {
-  width: 10vw;
+  width: 5vw;
   cursor: pointer;
   pointer-events: visible;
 }
@@ -687,9 +687,6 @@ main section.video .content {
 main section.video .content h3 {
   text-shadow: none;
 }
-main section.video .content h2 {
-  font-size: calc(2.5vw + 2.5vh + 3vmin);
-}
 main section.engines {
   height: 100%;
   width: 100%;
@@ -720,16 +717,12 @@ main section.engines .content h4 span {
 main section.engines .content h3 {
   font-family: "DIN-Bold", Arial, Verdana, sans-serif;
 }
-main section.engines .content h2 {
-  font-size: calc(2.5vw + 2.5vh + 3vmin);
-}
 main section.engines .content p {
   font-size: 1em;
 }
 main section.engines ul {
   max-width: 960px;
   width: 100%;
-  padding: 0 1.5em;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -1016,12 +1009,12 @@ li.inView {
 
   /* FALCON 9 */
   .close-modal::before {
-    width: 0.65em;
-    transform: rotate(45deg) translateX(0.16em);
+    width: 1em;
+    transform: rotate(45deg) translateX(0.2em);
   }
   .close-modal::after {
-    width: 0.65em;
-    transform: rotate(-45deg) translateX(0.16em);
+    width: 1em;
+    transform: rotate(-45deg) translateX(0.22em);
   }
 
   .video-modal iframe {
@@ -1407,12 +1400,12 @@ li.inView {
 
   /* FALCON 9 */
   .close-modal::before {
-    width: 0.5em;
-    transform: rotate(45deg) translateX(0.16em);
+    width: 1em;
+    transform: rotate(45deg) translateX(0.22em);
   }
   .close-modal::after {
-    width: 0.5em;
-    transform: rotate(-45deg) translateX(0.16em);
+    width: 1em;
+    transform: rotate(-45deg) translateX(0.25em);
   }
 }
 @media screen and (min-width: 150em) {
@@ -1453,14 +1446,14 @@ li.inView {
 
   /* FALCON 9 */
   .close-modal::before {
-    width: 0.5em;
+    width: 1em;
     height: 3px;
-    transform: rotate(45deg) translateX(0.16em);
+    transform: rotate(45deg) translateX(0.2em);
   }
   .close-modal::after {
-    width: 0.5em;
+    width: 1em;
     height: 3px;
-    transform: rotate(-45deg) translateX(0.16em);
+    transform: rotate(-45deg) translateX(0.22em);
   }
 }
 

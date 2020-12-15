@@ -44,12 +44,12 @@
     /* FALCON 9 */ 
     .close-modal {
         &::before {
-            width: .65em;
-            transform: rotate(45deg) translateX(0.16em);
+            width: 1em;
+            transform: rotate(45deg) translateX(0.2em);
         }
         &::after {
-            width: .65em;
-            transform: rotate(-45deg) translateX(0.16em);
+            width: 1em;
+            transform: rotate(-45deg) translateX(0.22em);
         }
     }
     .video-modal {
@@ -515,12 +515,12 @@
     /* FALCON 9 */ 
     .close-modal {
         &::before {
-            width: .5em;
-            transform: rotate(45deg) translateX(0.16em);
+            width: 1em;
+            transform: rotate(45deg) translateX(0.22em);
         }
         &::after {
-            width: .5em;
-            transform: rotate(-45deg) translateX(0.16em);
+            width: 1em;
+            transform: rotate(-45deg) translateX(0.25em);
         }
     }
 }
@@ -570,14 +570,14 @@
     /* FALCON 9 */ 
     .close-modal {
         &::before {
-            width: .5em;
+            width: 1em;
             height: 3px;
-            transform: rotate(45deg) translateX(0.16em);
+            transform: rotate(45deg) translateX(0.2em);
         }
         &::after {
-            width: .5em;
+            width: 1em;
             height: 3px;
-            transform: rotate(-45deg) translateX(0.16em);
+            transform: rotate(-45deg) translateX(0.22em);
         }
     }
 }
