@@ -170,7 +170,7 @@ header nav:nth-of-type(1) ul li a {
   margin-right: 1em;
   margin-top: 0.5em;
   position: relative;
-  padding-bottom: 0.25em;
+  padding-bottom: 0.15em;
 }
 header nav:nth-of-type(2) {
   background: #000;
@@ -210,7 +210,7 @@ header nav:nth-of-type(2) ul li.mobile_link {
 }
 header nav:nth-of-type(2) ul li a {
   position: relative;
-  padding-bottom: 0.25em;
+  padding-bottom: 0.15em;
   text-decoration: none;
   text-transform: uppercase;
   color: #FFF;
@@ -424,6 +424,11 @@ main section.img_block:nth-child(5) .content {
   margin-left: auto;
   margin-right: 2em;
 }
+main section.img_block .scroll_arrow {
+  width: 2em;
+  margin: 0 auto;
+  padding-bottom: 3em;
+}
 
 /* FALCON 9 */
 main section.falcon9_hero {
@@ -459,6 +464,11 @@ main section.falcon9_hero .content h3 {
   padding: 0 3em;
   text-shadow: none;
   text-transform: uppercase;
+}
+main section.falcon9_hero .scroll_arrow {
+  width: 2em;
+  margin: 0 auto;
+  padding-bottom: 3em;
 }
 main section.stats {
   background: #000;
@@ -932,6 +942,12 @@ li.inView {
   animation-fill-mode: forwards;
 }
 
+.moveupdown {
+  animation: moveupdown 2s infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -974,6 +990,20 @@ li.inView {
   100% {
     transform: translateY(-100%);
     transform-origin: top center;
+  }
+}
+@keyframes moveupdown {
+  0% {
+    transform: translateY(-2em);
+    opacity: 0;
+  }
+  75% {
+    transform: translateY(-1em);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
   }
 }
 /* RESPONSIVE */

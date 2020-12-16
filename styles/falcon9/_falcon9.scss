@@ -34,6 +34,11 @@ main {
           text-transform: uppercase;
         }
       }
+      .scroll_arrow {
+        width: 2em;
+        margin: 0 auto;
+        padding-bottom: 3em;
+    }
     }
     &.stats {
       background: $dark-color;

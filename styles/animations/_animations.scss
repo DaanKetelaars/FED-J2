@@ -125,6 +125,12 @@ li {
     animation-fill-mode: forwards;
 }
 
+.moveupdown {
+    animation: moveupdown 2s infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
 @keyframes fadein {
 	from {
 		opacity: 0;
@@ -175,5 +181,20 @@ li {
         transform: translateY(-100%);
         transform-origin: top center;
 
+	}
+}
+
+@keyframes moveupdown {
+	0% {
+        transform: translateY(-2em);
+        opacity: 0;
+    }
+    75% {
+        transform: translateY(-1em);
+        opacity: 1;
+	}
+    100% {
+        transform: translateY(0);
+        opacity: 0;
 	}
 }
