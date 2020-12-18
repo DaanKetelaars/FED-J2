@@ -3,7 +3,7 @@ header {
     width: 100%;
     position: fixed;
     display: flex;
-    padding: 1em 0;
+    padding: 2em 0;
     justify-content: center;
     align-items: center;
     background: transparent;
@@ -173,3 +173,69 @@ header {
         visibility: visible;
     }
 }
+
+header {
+    &.visible {
+        background: $dark-color;
+        transition: all .5s ease;
+        nav:nth-of-type(1) {
+            transform: translate(0, 0);
+            transition: all .5s ease;
+            z-index: 999;
+        }
+        nav:nth-of-type(2) {
+            &.open_subNav {
+                transform: translate(0, 0);
+                transition: all .5s ease;
+            }
+        }
+        button {
+            transform: translate(0, 0);
+            transition: all .5s ease;
+        }
+        .overlay {
+            &.open_overlay {
+                opacity: 1;
+                transition: all .5s ease;
+            }
+        }
+    }
+    &.hidden {
+        background: transparent;
+        transition: all .5s ease;
+        nav:nth-of-type(1) {
+            transform: translate(0, -20em);
+            transition: all .5s ease;
+        }
+        button {
+            transform: translate(0, -20em);
+            transition: all .5s ease;
+        }
+        nav:nth-of-type(2) {
+            &.open_subNav {
+                transform: translate(20em, 0);
+                transition: all .5s ease;
+            }
+        }
+        .overlay {
+            &.open_overlay {
+                opacity: 0;
+                transition: all .5s ease;
+            }
+        }
+    }
+    // &.hidden {
+    //     .open_subNav {
+    //         transform: translate(20em, 0);
+    //     }
+    // }
+}
+// .hidden {
+//     transform: translate(0, -30em);
+//     transition: all .5s ease-in-out;
+// }
+// .visible {
+//     transform: translate(0, 0);
+//     transition: all .5s ease-in-out;
+//     background-color: $dark-color;
+// }

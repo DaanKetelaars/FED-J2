@@ -6,6 +6,7 @@ CONTENT:
 03 - FADE IN ON SCROLL
 04 - FADE OUT ON SCROLL
 05 - ROCKET REVEAL
+06 - SHOW/HIDE NAV
 
 ***********/
 
@@ -104,7 +105,26 @@ function scrollPos() {
     }
 }
 
-// alle images bij elkaar
-// door de images heen loopen
-// next en prev functie
-// bij de laatste slide niet door kunnen klikken
+
+/* SHOW/HIDE NAV */
+
+let scrollPosition = 0;
+const nav = document.querySelector('header');
+// const sidenav = document.querySelector('header nav:nth-of-type(2)');
+
+function checkPos() {
+    let windowY = window.scrollY;
+    if (windowY < scrollPosition) {
+        nav.classList.add('visible');
+        nav.classList.remove('hidden');
+        // sidenav.classList.add('visible');
+        // sidenav.classList.remove('hidden');
+    } else {
+        nav.classList.add('hidden');
+        nav.classList.remove('visible');
+        // sidenav.classList.add('hidden');
+        // sidenav.classList.remove('visible');
+    }
+    scrollPosition = windowY;
+}
+window.addEventListener('scroll', checkPos);

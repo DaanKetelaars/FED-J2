@@ -131,7 +131,7 @@ header {
   width: 100%;
   position: fixed;
   display: flex;
-  padding: 1em 0;
+  padding: 2em 0;
   justify-content: center;
   align-items: center;
   background: transparent;
@@ -296,6 +296,48 @@ header button div {
 .overlay.open_overlay {
   background-color: rgba(0, 0, 0, 0.75);
   visibility: visible;
+}
+
+header.visible {
+  background: #000;
+  transition: all 0.5s ease;
+}
+header.visible nav:nth-of-type(1) {
+  transform: translate(0, 0);
+  transition: all 0.5s ease;
+  z-index: 999;
+}
+header.visible nav:nth-of-type(2).open_subNav {
+  transform: translate(0, 0);
+  transition: all 0.5s ease;
+}
+header.visible button {
+  transform: translate(0, 0);
+  transition: all 0.5s ease;
+}
+header.visible .overlay.open_overlay {
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+header.hidden {
+  background: transparent;
+  transition: all 0.5s ease;
+}
+header.hidden nav:nth-of-type(1) {
+  transform: translate(0, -20em);
+  transition: all 0.5s ease;
+}
+header.hidden button {
+  transform: translate(0, -20em);
+  transition: all 0.5s ease;
+}
+header.hidden nav:nth-of-type(2).open_subNav {
+  transform: translate(20em, 0);
+  transition: all 0.5s ease;
+}
+header.hidden .overlay.open_overlay {
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
 /* FOOTER */
