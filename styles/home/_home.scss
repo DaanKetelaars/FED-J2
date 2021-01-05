@@ -1,11 +1,19 @@
-/* HOME */
+
+
+/**** 
+
+06 - HOME 
+
+****/
+
+
 main {
     height: 100%;
     width: 100%;
     position: relative;
     z-index: 1;
     section {
-        &.content {
+        article {
             width: 100%;
             height: 100%;
             width: calc(100% - 3em);
@@ -37,9 +45,10 @@ main {
                 text-transform: uppercase;
                 border: 2px solid $primary-color;
                 width: fit-content;
-                width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-                width: -moz-max-content;    /* Firefox/Gecko */
-                width: -webkit-max-content; /* Chrome */
+                width: intrinsic;           /* Browser compatibility - Safari/WebKit uses a non-standard name */
+                width: -moz-max-content;    /* Browser compatibility - Firefox/Gecko */ 
+                width: -webkit-max-content; /* Browser compatibility - Chrome */
+                /* source about fit-content: https://developer.mozilla.org/en-US/docs/Web/CSS/fit-content */
                 padding: 1.25em 3em;
                 margin-top: 1em;
                 position: relative;
@@ -47,30 +56,30 @@ main {
                 z-index: 100;
             }
         }
-        &.img_block {
+        &.img_section {
             height: 100vh;
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             &:nth-child(1){
-                background: url(../images/mobile-backgrounds/docking.webp) no-repeat center center / cover;
+                background: url("../images/mobile-backgrounds/docking.webp") no-repeat center center / cover;
             }
             &:nth-child(2) {
-                background: url(../images/mobile-backgrounds/home_demo2.webp) no-repeat center center / cover;
+                background: url("../images/mobile-backgrounds/home_demo2.webp") no-repeat center center / cover;
             }
             &:nth-child(3) {
-                background: url(../images/mobile-backgrounds/iss_game.webp) no-repeat center center / cover;
+                background: url("../images/mobile-backgrounds/iss_game.webp") no-repeat center center / cover;
             }
             &:nth-child(4) {
-                background: url(../images/mobile-backgrounds/SN8.webp) no-repeat center center / cover;
-                .content {
+                background: url("../images/mobile-backgrounds/SN8.webp") no-repeat center center / cover;
+                article {
                     justify-content: flex-start;
                 }
             }
             &:nth-child(5) {
-                background: url(../images/mobile-backgrounds/home_moon.webp) no-repeat center center / cover;
-                .content {
+                background: url("../images/mobile-backgrounds/home_moon.webp") no-repeat center center / cover;
+                article {
                     justify-content: flex-start;
                     width: 50%;
                     margin-left: auto;

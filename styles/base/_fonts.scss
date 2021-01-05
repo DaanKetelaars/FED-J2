@@ -1,4 +1,15 @@
-/* FONTS */
+
+
+
+/**** 
+
+02 - FONTS 
+
+****/
+
+
+/* source display swap: https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display */
+
 @font-face {
     font-family: "DIN-Light";
     src: url("../fonts/DIN\ Light.woff2") format("woff2");
@@ -72,7 +83,7 @@ a {
 }
 button {
     font-style: normal;
-    font-size: 1em;
+    font-size: .875em;
     line-height: 1em;
     font-weight: 400;
     font-family: "DIN-Bold", Arial, Verdana, sans-serif;  

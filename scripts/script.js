@@ -1,23 +1,28 @@
 /*********************
 
 CONTENT: 
-01 - HAMBURGER MENU
-02 - BACKGROUND IMAGES (HOMEPAGE)
-03 - FADE IN ON SCROLL
-04 - FADE OUT ON SCROLL
-05 - ROCKET REVEAL
-06 - SHOW/HIDE NAV
+00 - HAMBURGER MENU
+01 - FADE IN ON SCROLL
+02 - FADE OUT ON SCROLL
+03 - SHOW/HIDE NAV
 
 ***********/
 
 
-/* HAMBURGER MENU */
+
+
+/****************
+HAMBURGER MENU 
+************/
+
+/* collect all queryselectors */
 const hamMenu = document.querySelector('header button');
 const subNav = document.querySelector('header nav:nth-of-type(2)');
 const overlayMenu = document.querySelector('.overlay');
 
 
-hamMenu.addEventListener('click', function () {
+/* simple addeventlistener with function to activate style and classlist properties */
+hamMenu.addEventListener('click', () => {
     hamMenu.classList.toggle('open_hamMenu');
     subNav.classList.toggle('open_subNav');
     overlayMenu.classList.toggle('open_overlay');
@@ -25,39 +30,19 @@ hamMenu.addEventListener('click', function () {
 
 
 
-/* BACKGROUND IMAGES (HOMEPAGE) */
+/****************
+FADE IN ON SCROLL 
+************/
 
-const bgImg = document.querySelectorAll('[data-bg');
-const screenWidth = window.innerWidth;
+/* fade in elements function, loop through all queryselectors, 
+show class when elements are in users view, hide class when user is out of view */
 
-for (let index = 0; index < bgImg.length; index++) {
+const fadeElements = () => {
 
-    if (screenWidth < 768) {
+    const fadedElements = document.querySelectorAll(".fade-element");
 
-        bgImg[index].style.backgroundImage = 'url(' + bgImg[index].getAttribute('data-bg-mobile') + ')';
-        bgImg[index].style.backgroundRepeat = "no-repeat";
-        bgImg[index].style.backgroundSize = "cover";
-        bgImg[index].style.backgroundPosition = "bottom center";
-
-
-
-
-    } else {
-        bgImg[index].style.backgroundImage = 'url(' + bgImg[index].getAttribute('data-bg-desktop') + ')';
-        bgImg[index].style.backgroundRepeat = "no-repeat";
-        bgImg[index].style.backgroundSize = "cover";
-        bgImg[index].style.backgroundPosition = "bottom center";
-    }
-}
-
-/* FADE IN ON SCROLL */
-
-let fadeInElements = document.querySelectorAll(".fade-element");
-window.addEventListener('scroll', fadeIn);
-
-function fadeIn() {
-    for (let i = 0; i < fadeInElements.length; i++) {
-        const elem = fadeInElements[i]
+    for (let i = 0; i < fadedElements.length; i++) {
+        const elem = fadedElements[i]
         const distInView = elem.getBoundingClientRect().top - window.innerHeight;
         if (distInView < 0) {
             elem.classList.add("inView");
@@ -66,65 +51,61 @@ function fadeIn() {
         }
     }
 }
-fadeIn();
+fadeElements();
 
-/* FADE OUT ON SCROLL */
+/* simple window addeventlistener on scroll */
+window.addEventListener('scroll', fadeElements);
 
-window.addEventListener('scroll', fadeOut);
 
-function fadeOut() {
+
+
+/****************
+FADE OUT ON SCROLL 
+************/
+
+
+/* fade out elements function, loop through all queryselectors, 
+drop opacity when items are out of users view, if not then show full opacity */
+const fadeOut = () => {
     let curScrollPos = window.pageYOffset;
     let fadeOutElements = document.querySelectorAll('.outView');
+
     for (let i = 0; i < fadeOutElements.length; i++) {
         if (curScrollPos > 100) {
             fadeOutElements[i].style.opacity = -curScrollPos / 100 + 2;
         } else {
-            console.log("Eet 5 droge crackers in 1 minuut");
             fadeOutElements[i].style.opacity = 1;
         }
 
     }
 }
-
-/* ROCKET REVEAL */
-
-const linesRocket = document.querySelector('.line-rocket');
-const fullRocket = document.querySelector('.full-rocket');
-
-function scrollPos() {
-    scrollElm = window.pageYOffset;
-    console.log(scrollElm);
-
-    if (scrollElm > 500) {
-        linesRocket.style.opacity = 1;
-        linesRocket.style.zIndex = 100;
-
-    } else {
-        linesRocket.style.opacity = 0;
-        linesRocket.style.zIndex = -1;
-    }
-}
+/* simple window addeventlistener on scroll */
+window.addEventListener('scroll', fadeOut);
 
 
-/* SHOW/HIDE NAV */
 
+
+/****************
+SHOW/HIDE NAV 
+************/
+
+/* if scroll y axis is smaller then scrollposition show header, if not then hide header */
 let scrollPosition = 0;
-const nav = document.querySelector('header');
-// const sidenav = document.querySelector('header nav:nth-of-type(2)');
+const header = document.querySelector('header');
 
-function checkPos() {
+const checkPos = () => {
+
     let windowY = window.scrollY;
+
+
     if (windowY < scrollPosition) {
-        nav.classList.add('visible');
-        nav.classList.remove('hidden');
-        // sidenav.classList.add('visible');
-        // sidenav.classList.remove('hidden');
+        header.classList.add('visible');
+        header.classList.remove('hidden');
     } else {
-        nav.classList.add('hidden');
-        nav.classList.remove('visible');
-        // sidenav.classList.add('hidden');
-        // sidenav.classList.remove('visible');
+        header.classList.add('hidden');
+        header.classList.remove('visible');
     }
     scrollPosition = windowY;
 }
+/* simple window addeventlistener on scroll */
 window.addEventListener('scroll', checkPos);

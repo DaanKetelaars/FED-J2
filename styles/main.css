@@ -1,4 +1,23 @@
-/* RESET */
+/*********************
+
+CONTENT: 
+
+01 - RESET
+02 - FONTS
+03 - BASE
+04 - HEADER/NAVIGATION
+05 - FOOTER
+06 - HOME
+07 - FALCON 9
+08 - ANIMATIONS
+09 - RESPONSIVE
+
+***********/
+/**** 
+
+01 - RESET 
+
+****/
 *,
 *::after,
 *::before {
@@ -26,7 +45,12 @@ li {
   list-style: none;
 }
 
-/* FONTS */
+/**** 
+
+02 - FONTS 
+
+****/
+/* source display swap: https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display */
 @font-face {
   font-family: "DIN-Light";
   src: url("../fonts/DIN Light.woff2") format("woff2");
@@ -97,13 +121,29 @@ a {
 
 button {
   font-style: normal;
-  font-size: 1em;
+  font-size: 0.875em;
   line-height: 1em;
   font-weight: 400;
   font-family: "DIN-Bold", Arial, Verdana, sans-serif;
 }
 
-/* BASE */
+/**** 
+
+03 - BASE 
+
+****/
+/* 
+ANTIALIASED RESEARCH 
+
+Toch gegaan voor antialiased om mijn fonts wat strakker te maken. 
+Hieronder staan wat voor en nadelen die ik gevonden heb online.
+
+Tegen: https://github.com/google/fonts/issues/1170
+Tegen: https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/
+Voor: https://medium.com/better-programming/improving-font-rendering-with-css-3383fc358cbc
+MDN uitleg: https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
+
+*/
 body {
   font-style: normal;
   font-size: 1em;
@@ -126,7 +166,11 @@ h2 {
   letter-spacing: -0.0375em;
 }
 
-/* HEADER */
+/**** 
+
+04 - HEADER/NAVIGATION 
+
+****/
 header {
   width: 100%;
   position: fixed;
@@ -153,15 +197,16 @@ header nav:nth-of-type(1) ul {
 header nav:nth-of-type(1) ul li.animated_link {
   display: none;
 }
-header nav:nth-of-type(1) ul li #logo {
+#logo {
   margin: 0;
 }
-header nav:nth-of-type(1) ul li #logo img {
+#logo img {
   width: 150px;
   height: 100%;
   position: relative;
   z-index: 1000;
 }
+
 header nav:nth-of-type(1) ul li a {
   text-decoration: none;
   text-transform: uppercase;
@@ -340,7 +385,11 @@ header.hidden .overlay.open_overlay {
   transition: all 0.5s ease;
 }
 
-/* FOOTER */
+/**** 
+
+05 - FOOTER 
+
+****/
 footer {
   width: 100%;
   height: 100%;
@@ -383,14 +432,18 @@ footer ul li.desktop_copyright {
   display: none;
 }
 
-/* HOME */
+/**** 
+
+06 - HOME 
+
+****/
 main {
   height: 100%;
   width: 100%;
   position: relative;
   z-index: 1;
 }
-main section.content {
+main section article {
   width: 100%;
   height: 100%;
   width: calc(100% - 3em);
@@ -399,24 +452,24 @@ main section.content {
   justify-content: flex-end;
   flex-direction: column;
 }
-main section.content h2 {
+main section article h2 {
   color: #FFF;
   margin-bottom: 0.5em;
   margin-top: 0.375em;
   text-transform: uppercase;
   text-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
-main section.content h3 {
+main section article h3 {
   color: #FFF;
   text-transform: uppercase;
   text-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
-main section.content p {
+main section article p {
   color: #FFF;
   margin-bottom: 2em;
   width: 100%;
 }
-main section.content button {
+main section article button {
   color: #FFF;
   background: transparent;
   text-decoration: none;
@@ -424,57 +477,62 @@ main section.content button {
   border: 2px solid #FFF;
   width: fit-content;
   width: intrinsic;
-  /* Safari/WebKit uses a non-standard name */
+  /* Browser compatibility - Safari/WebKit uses a non-standard name */
   width: -moz-max-content;
-  /* Firefox/Gecko */
+  /* Browser compatibility - Firefox/Gecko */
   width: -webkit-max-content;
-  /* Chrome */
+  /* Browser compatibility - Chrome */
+  /* source about fit-content: https://developer.mozilla.org/en-US/docs/Web/CSS/fit-content */
   padding: 1.25em 3em;
   margin-top: 1em;
   position: relative;
   overflow: hidden;
   z-index: 100;
 }
-main section.img_block {
+main section.img_section {
   height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-main section.img_block:nth-child(1) {
-  background: url(../images/mobile-backgrounds/docking.webp) no-repeat center center/cover;
+main section.img_section:nth-child(1) {
+  background: url("../images/mobile-backgrounds/docking.webp") no-repeat center center/cover;
 }
-main section.img_block:nth-child(2) {
-  background: url(../images/mobile-backgrounds/home_demo2.webp) no-repeat center center/cover;
+main section.img_section:nth-child(2) {
+  background: url("../images/mobile-backgrounds/home_demo2.webp") no-repeat center center/cover;
 }
-main section.img_block:nth-child(3) {
-  background: url(../images/mobile-backgrounds/iss_game.webp) no-repeat center center/cover;
+main section.img_section:nth-child(3) {
+  background: url("../images/mobile-backgrounds/iss_game.webp") no-repeat center center/cover;
 }
-main section.img_block:nth-child(4) {
-  background: url(../images/mobile-backgrounds/SN8.webp) no-repeat center center/cover;
+main section.img_section:nth-child(4) {
+  background: url("../images/mobile-backgrounds/SN8.webp") no-repeat center center/cover;
 }
-main section.img_block:nth-child(4) .content {
+main section.img_section:nth-child(4) article {
   justify-content: flex-start;
 }
-main section.img_block:nth-child(5) {
-  background: url(../images/mobile-backgrounds/home_moon.webp) no-repeat center center/cover;
+main section.img_section:nth-child(5) {
+  background: url("../images/mobile-backgrounds/home_moon.webp") no-repeat center center/cover;
 }
-main section.img_block:nth-child(5) .content {
+main section.img_section:nth-child(5) article {
   justify-content: flex-start;
   width: 50%;
   margin-left: auto;
   margin-right: 2em;
 }
-main section.img_block .scroll_arrow {
+main section.img_section .scroll_arrow {
   width: 2em;
   margin: 0 auto;
   padding-bottom: 3em;
 }
 
-/* FALCON 9 */
-main section.falcon9_hero {
-  background: url(../images/mobile-backgrounds/f9_feature.jpg) no-repeat center center/cover;
+/**** 
+
+07 - FALCON 9 
+
+****/
+.intro_section {
+  background: url("../images/mobile-backgrounds/f9_feature.jpg") no-repeat center center/cover;
   height: 100vh;
   width: 100%;
   padding: 0;
@@ -483,7 +541,7 @@ main section.falcon9_hero {
   justify-content: center;
   text-align: center;
 }
-main section.falcon9_hero .content {
+.intro_section article {
   width: 100%;
   height: 100%;
   display: flex;
@@ -492,14 +550,14 @@ main section.falcon9_hero .content {
   align-items: center;
   margin: -5em auto 0;
 }
-main section.falcon9_hero .content h1 {
+.intro_section article h1 {
   color: #FFF;
   font-size: 3em;
   margin-bottom: 0.375em;
   text-transform: uppercase;
   width: 100%;
 }
-main section.falcon9_hero .content h3 {
+.intro_section article h3 {
   color: #FFF;
   font-size: 0.875em;
   line-height: 1.25em;
@@ -507,19 +565,20 @@ main section.falcon9_hero .content h3 {
   text-shadow: none;
   text-transform: uppercase;
 }
-main section.falcon9_hero .scroll_arrow {
+.intro_section .scroll_arrow {
   width: 2em;
   margin: 0 auto;
   padding-bottom: 3em;
 }
-main section.stats {
+
+main section.stats_section {
   background: #000;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
 }
-main section.stats .stats-content {
+main section.stats_section section {
   max-width: 960px;
   width: 100%;
   height: 100%;
@@ -528,26 +587,27 @@ main section.stats .stats-content {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
+  margin: 0;
 }
-main section.stats .stats-content h4 {
+main section.stats_section section h4 {
   color: white;
   font-size: 3em;
   padding-bottom: 0.25em;
   font-family: "DIN-Regular", Arial, Verdana, sans-serif;
 }
-main section.stats .stats-content p {
+main section.stats_section section p {
   font-size: 0.75em;
   padding: 0 1em;
   text-align: center;
   line-height: 1.25em;
   text-transform: uppercase;
 }
-main section.rocket_overview {
+.rocket_info_section {
   height: 100%;
   width: 100%;
   position: relative;
 }
-main section.rocket_overview .content {
+.rocket_info_section article {
   margin: 0 auto;
   width: 100%;
   height: 100vh;
@@ -555,11 +615,11 @@ main section.rocket_overview .content {
   position: relative;
   justify-content: center;
 }
-main section.rocket_overview .content p {
+.rocket_info_section article p {
   z-index: 100;
   align-self: start;
 }
-main section.rocket_overview .line-rocket {
+.rocket_info_section .line-rocket {
   position: absolute;
   top: 0;
   left: 0;
@@ -567,12 +627,13 @@ main section.rocket_overview .line-rocket {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../images/mobile-backgrounds/WebsiteF9Fairings_Lines_Mobile.webp);
+  background-image: url("../images/mobile-backgrounds/WebsiteF9Fairings_Lines_Mobile.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
 }
-main section.static_slider {
+
+.rocket_slider_section {
   max-width: 960px;
   margin: 0 auto;
   width: 100%;
@@ -582,35 +643,35 @@ main section.static_slider {
   justify-content: center;
   flex-direction: column;
 }
-main section.static_slider .slider_header {
+.rocket_slider_section .slider_header {
   height: 100%;
   width: 100%;
   display: grid;
   grid-template-rows: 1fr;
 }
-main section.static_slider .slider_header .slider-buttons {
+.rocket_slider_section .slider_header .slider-buttons {
   direction: rtl;
 }
-main section.static_slider .slider_header .slider-buttons span {
+.rocket_slider_section .slider_header .slider-buttons span {
   padding: 0 0 0 1.5em;
 }
-main section.static_slider .slider_header .slider-buttons span img {
+.rocket_slider_section .slider_header .slider-buttons span img {
   width: 2vw;
 }
-main section.static_slider .slider_header h2 {
+.rocket_slider_section .slider_header h2 {
   font-size: 2.25em;
   text-transform: uppercase;
 }
-main section.static_slider .slider_header h3 {
+.rocket_slider_section .slider_header h3 {
   font-size: 0.875em;
   text-transform: uppercase;
   font-family: "DIN-Bold", Arial, Verdana, sans-serif;
   padding-bottom: 0.25em;
 }
-main section.static_slider ul {
+.rocket_slider_section ul {
   margin-top: 2em;
 }
-main section.static_slider ul li {
+.rocket_slider_section ul li {
   border-bottom: 0.1em solid #444444;
   font-family: "DIN-Bold", Arial, Verdana, sans-serif;
   padding: 1.25em 0;
@@ -619,22 +680,23 @@ main section.static_slider ul li {
   color: #FFF;
   justify-content: space-between;
 }
-main section.static_slider ul li p {
+.rocket_slider_section ul li p {
   font-size: 1em;
   font-family: "DIN-Bold", Arial, Verdana, sans-serif;
 }
-main section.static_slider ul li p span {
+.rocket_slider_section ul li p span {
   color: #979797;
   font-size: 1em;
   text-transform: uppercase;
 }
-main section.static_slider ul li span {
+.rocket_slider_section ul li span {
   color: #FFF;
   font-size: 0.875em;
   text-transform: uppercase;
 }
-main section.video {
-  background: url(../images/mobile-backgrounds/f9_video.webp) no-repeat 53% center/cover;
+
+.video_section {
+  background: url("../images/mobile-backgrounds/f9_video.webp") no-repeat 53% center/cover;
   height: 100vh;
   width: 100%;
   padding: 0;
@@ -646,7 +708,7 @@ main section.video {
   transition: transform 1.5s ease-in-out;
   position: relative;
 }
-main section.video .play-btn {
+.video_section .play-btn {
   background-color: transparent;
   border: none;
   height: 100%;
@@ -658,8 +720,8 @@ main section.video .play-btn {
   left: 0;
   pointer-events: none;
 }
-main section.video .play-btn img {
-  width: 5vw;
+.video_section .play-btn img {
+  width: 15vw;
   cursor: pointer;
   pointer-events: visible;
 }
@@ -680,6 +742,7 @@ main section.video .play-btn img {
   align-items: center;
   flex-direction: column;
   visibility: hidden;
+  opacity: 0;
 }
 .video-modal iframe {
   transition: all 1.5s ease-in-out;
@@ -733,53 +796,52 @@ main section.video .play-btn img {
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-main section.video .content {
+.video_section article {
   margin: 4em auto;
 }
-main section.video .content h3 {
+.video_section article h3 {
   text-shadow: none;
 }
-main section.engines {
+
+.engines_section {
   height: 100%;
   width: 100%;
   margin: 0 auto 3em;
 }
-main section.engines .engine_img {
-  background: url(../images/mobile-backgrounds/Merlin.webp) no-repeat center center/cover;
+.engines_section .engine_img {
+  background: url("../images/mobile-backgrounds/Merlin.webp") no-repeat center center/cover;
   height: 75vh;
   width: 100%;
   padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
 }
-main section.engines .content {
+.engines_section .engine_img article {
   margin: 2em auto 0;
 }
-main section.engines .content h4 {
+.engines_section .engine_img article h4 {
   font-size: 0.875em;
   padding: 2em 0 2em;
   font-family: "DIN-Medium", Arial, Verdana, sans-serif;
   text-transform: uppercase;
 }
-main section.engines .content h4 span {
+.engines_section .engine_img article h4 span {
   color: #979797;
 }
-main section.engines .content h3 {
+.engines_section .engine_img article h3 {
   font-family: "DIN-Bold", Arial, Verdana, sans-serif;
 }
-main section.engines .content p {
+.engines_section .engine_img article p {
   font-size: 1em;
 }
-main section.engines ul {
+.engines_section ul {
   max-width: 960px;
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-main section.engines ul li {
+.engines_section ul li {
   border-bottom: 0.1em solid #444444;
   font-family: "DIN-Bold", Arial, Verdana, sans-serif;
   padding: 1.25em 0;
@@ -789,27 +851,28 @@ main section.engines ul li {
   color: #FFF;
   justify-content: space-between;
 }
-main section.engines ul li p {
+.engines_section ul li p {
   margin-bottom: 0;
   font-size: 1em;
   font-family: "DIN-Bold", Arial, Verdana, sans-serif;
 }
-main section.engines ul li p span {
+.engines_section ul li p span {
   color: #979797;
   font-size: 1em;
   text-transform: uppercase;
 }
-main section.engines ul li span {
+.engines_section ul li span {
   color: #FFF;
   font-size: 0.875em;
   text-transform: uppercase;
 }
-main section.gallery {
+
+.gallery_section {
   height: 100%;
   width: 100%;
 }
-main section.gallery .gallery_img {
-  background: url(../images/mobile-backgrounds/F9_1_mobile.webp) no-repeat center center/cover;
+.gallery_section .gallery_img {
+  background: url("../images/mobile-backgrounds/F9_1_mobile.webp") no-repeat center center/cover;
   height: 75vh;
   width: 100%;
   padding: 0;
@@ -818,7 +881,7 @@ main section.gallery .gallery_img {
   justify-content: center;
   text-align: center;
 }
-main section.gallery .slider-buttons {
+.gallery_section .slider-buttons {
   height: 100%;
   max-width: 960px;
   width: 100%;
@@ -828,54 +891,65 @@ main section.gallery .slider-buttons {
   justify-content: center;
   align-items: center;
 }
-main section.gallery .slider-buttons p {
+.gallery_section .slider-buttons p {
   order: 1;
   text-align: center;
   padding: 0 3em;
   font-size: 0.75em;
 }
-main section.gallery .slider-buttons span img {
+.gallery_section .slider-buttons span img {
   width: 2vw;
 }
-main section.gallery .slider-buttons span:nth-of-type(2) {
+.gallery_section .slider-buttons span:nth-of-type(2) {
   order: 2;
 }
-main section.gallery .content {
+.gallery_section article {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 8em auto;
+  width: 100%;
+  height: 100%;
+  width: calc(100% - 3em);
+  margin: 8em auto;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
-main section.gallery .content .button-container {
+.gallery_section article .button-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-main section.gallery .content .button-container button {
+.gallery_section article .button-container button {
   min-width: 275px;
   padding: 1.25em 1em;
   font-size: 1em;
 }
-main section.gallery .content .button-container button:nth-child(2) {
+.gallery_section article .button-container button:nth-child(2) {
   margin-top: 1.25em;
 }
-main section.gallery .content p {
+.gallery_section article p {
   text-align: center;
   margin: 3em 0 0.25em;
   color: #979797;
 }
-main section.gallery .content p a {
+.gallery_section article p a {
   color: #FFF;
   font-family: "DIN-Regular", Arial, Verdana, sans-serif;
   text-decoration: none;
 }
-main section.gallery .content .line {
+.gallery_section article .line {
   width: 2px;
   height: 18vh;
   background: #FFF;
 }
 
-/* ANIMATIONS */
+/**** 
+
+08 - ANIMATIONS 
+
+****/
 /* FADE IN ELEMENTS */
 .content h1.fade-element {
   transition-delay: 0.75s;
@@ -1048,7 +1122,14 @@ li.inView {
     opacity: 0;
   }
 }
-/* RESPONSIVE */
+/**** 
+
+09 - RESPONSIVE 
+
+****/
+/*** 
+MIN WIDTH 48 EM 
+***/
 @media screen and (min-width: 48em) {
   /* HEADER */
   header nav:nth-of-type(2) ul li a {
@@ -1056,7 +1137,7 @@ li.inView {
   }
   header button::before {
     width: 1em;
-    margin: 0.16em 0;
+    margin: 0.14em 0;
   }
   header button::after {
     width: 1em;
@@ -1098,15 +1179,18 @@ li.inView {
     margin-top: 2em;
   }
 
-  .gallery .content .button-container button {
+  .gallery_section article .button-container button {
     min-width: 300px;
     padding: 0;
     font-size: 1em;
   }
-  .gallery .content .button-container button:nth-child(2) {
+  .gallery_section article .button-container button:nth-child(2) {
     margin-top: 1.25em;
   }
 }
+/*** 
+MIN WIDTH 64 EM 
+***/
 @media screen and (min-width: 64em) {
   /* HEADER */
   header {
@@ -1172,7 +1256,7 @@ li.inView {
   }
   header button::before {
     width: 1em;
-    margin: 0.1em 0;
+    margin: 0.12em 0;
   }
   header button::after {
     width: 1em;
@@ -1196,187 +1280,194 @@ li.inView {
   }
 
   /* HOME */
-  main section.content {
+  main section article {
     width: calc(960px - 3em);
     max-width: 100%;
     margin: 10em auto;
   }
-  main section.content h2 {
+  main section article h2 {
     font-size: 3em;
   }
-  main section.content h3 {
+  main section article h3 {
     font-size: 1.25em;
   }
-  main section.content p {
+  main section article p {
     width: 50ch;
     font-size: 1em;
   }
-  main section.content button {
+  main section article button {
     font-size: 0.875em;
   }
-  main section.content button::before {
+  main section article button::before {
     background: #FFF;
     content: "";
     position: absolute;
     z-index: -1;
   }
-  main section.content button::after {
+  main section article button::after {
     background: #FFF;
     content: "";
     position: absolute;
     z-index: -1;
   }
-  main section.content button:hover {
+  main section article button:hover {
     color: #000;
     cursor: pointer;
   }
-  main section.img_block:nth-child(1) {
-    background: url(../images/desktop-backgrounds/docking.jpg) no-repeat center center/cover;
+  .img_section:nth-child(1) {
+    background: url("../images/desktop-backgrounds/docking.jpg") no-repeat center center/cover;
   }
-  main section.img_block:nth-child(2) {
-    background: url(../images/desktop-backgrounds/home_demo2.jpg) no-repeat center center/cover;
+  .img_section:nth-child(2) {
+    background: url("../images/desktop-backgrounds/home_demo2.jpg") no-repeat center center/cover;
   }
-  main section.img_block:nth-child(3) {
-    background: url(../images/desktop-backgrounds/iss_game.jpg) no-repeat center center/cover;
+  .img_section:nth-child(3) {
+    background: url("../images/desktop-backgrounds/iss_game.jpg") no-repeat center center/cover;
   }
-  main section.img_block:nth-child(4) {
-    background: url(../images/desktop-backgrounds/SN8.jpg) no-repeat center center/cover;
+  .img_section:nth-child(4) {
+    background: url("../images/desktop-backgrounds/SN8.jpg") no-repeat center center/cover;
   }
-  main section.img_block:nth-child(5) {
-    background: url(../images/desktop-backgrounds/home_moon.jpg) no-repeat center center/cover;
+  .img_section:nth-child(5) {
+    background: url("../images/desktop-backgrounds/home_moon.jpg") no-repeat center center/cover;
   }
-  main section.img_block:nth-child(5) .content {
+  .img_section:nth-child(5) article {
     padding-left: 5em;
     justify-content: center;
   }
-  main section.img_block:nth-child(5) .content h2 {
+  .img_section:nth-child(5) article h2 {
     width: 15ch;
   }
-  main section.img_block:nth-child(5) .content p {
+  .img_section:nth-child(5) article p {
     width: 50ch;
   }
 
   /* FALCON 9 */
-  main section.falcon9_hero .content h1 {
+  .intro_section article h1 {
     font-size: 6em;
   }
-  main section.falcon9_hero .content h3 {
+  .intro_section article h3 {
     font-size: 1.25em;
   }
-  main section.stats .stats-content {
+
+  .stats_section section {
     padding: 6em 1em;
   }
-  main section.stats .stats-content h4 {
+  .stats_section section h4 {
     font-size: 8em;
     font-family: "DIN-Medium", Arial, Verdana, sans-serif;
     padding-bottom: 0;
   }
-  main section.stats .stats-content p {
+  .stats_section section p {
     font-size: 1.5em;
   }
-  main section.rocket_overview .content {
+
+  .rocket_info_section article {
     width: calc(960px - 3em);
   }
-  main section.rocket_overview .content p {
+  .rocket_info_section article p {
     font-size: 1.25em;
   }
-  main section.rocket_overview .line-rocket {
-    background-image: url(../images/desktop-backgrounds/WebsiteF9Fairings_Lines_Desktop.webp);
+  .rocket_info_section .line-rocket {
+    background-image: url("../images/desktop-backgrounds/WebsiteF9Fairings_Lines_Desktop.webp");
   }
-  main section.static_slider {
+
+  .rocket_slider_section {
     max-width: calc(960px - 3em);
     padding: 4em 0;
   }
-  main section.static_slider ul li span {
+  .rocket_slider_section ul li span {
     font-size: 1.25em;
   }
-  main section.static_slider ul li p {
+  .rocket_slider_section ul li p {
     font-size: 1.25em;
   }
-  main section.static_slider .slider_header h3 {
+  .rocket_slider_section .slider_header h3 {
     font-size: 1.25em;
     font-family: "DIN-Regular", Arial, Verdana, sans-serif;
     padding-bottom: 0.5em;
   }
-  main section.static_slider .slider_header h2 {
+  .rocket_slider_section .slider_header h2 {
     font-size: 2.75em;
   }
-  main section.static_slider .slider_header .slider-buttons span img {
+  .rocket_slider_section .slider_header .slider-buttons span img {
     width: 0.5vw;
   }
-  main section.video .play-btn img {
-    width: 3vw;
+
+  .video_section .play-btn img {
+    width: 5vw;
   }
-  main section.video .content h3 {
+  .video_section article h3 {
     font-size: 1.25em;
   }
-  main section.video .content h2 {
+  .video_section article h2 {
     font-size: 3em;
   }
-  main section.engines {
+
+  .engines_section {
     margin: 0 auto;
     padding: 10em 0 10em;
-    background: url(../images/mobile-backgrounds/Merlin.webp) no-repeat center center/cover;
+    background: url("../images/mobile-backgrounds/Merlin.webp") no-repeat center center/cover;
   }
-  main section.engines .content h3 {
+  .engines_section article h3 {
     font-size: 1.25em;
     font-family: "DIN-Regular", Arial, Verdana, sans-serif;
   }
-  main section.engines .content h2 {
+  .engines_section article h2 {
     font-size: 3em;
   }
-  main section.engines .content h4 {
+  .engines_section article h4 {
     font-size: 1em;
     font-family: "DIN-Bold", Arial, Verdana, sans-serif;
   }
-  main section.engines .engine_img {
+  .engines_section .engine_img {
     display: none;
   }
-  main section.engines ul {
+  .engines_section ul {
     max-width: calc(480px - 3em);
     margin-right: auto;
     padding: 0;
   }
-  main section.gallery .slider-buttons span img {
+
+  .gallery_section .slider-buttons span img {
     width: 0.5vw;
   }
-  main section.gallery .content .line {
+  .gallery_section article .line {
     height: 25vh;
   }
-  main section.gallery .content .button-container {
+  .gallery_section article .button-container {
     justify-content: center;
     flex-direction: row;
   }
-  main section.gallery .content .button-container button {
+  .gallery_section article .button-container button {
     padding: 1.5em 1em;
     margin-left: 1em;
     margin-right: 1em;
     font-size: 1em;
   }
-  main section.gallery .content .button-container button:nth-child(2) {
+  .gallery_section article .button-container button:nth-child(2) {
     margin-top: auto;
   }
-  main section.gallery .content p {
+  .gallery_section article p {
     width: 100%;
     font-size: 1em;
     margin-bottom: 1.25em;
   }
-  main section.gallery .content p a {
+  .gallery_section article p a {
     font-size: 1em;
   }
-  main section.gallery .slider-buttons {
+  .gallery_section .slider-buttons {
     max-width: calc(100% - 3em);
     justify-content: space-between;
   }
-  main section.gallery .slider-buttons p {
+  .gallery_section .slider-buttons p {
     font-size: 1em;
   }
-  main section.video-modal iframe {
+
+  .video-modal iframe {
     width: 640px;
     height: 350px;
     margin: 0 auto;
   }
-  main section.video-modal span {
+  .video-modal span {
     margin-top: 2em;
   }
 
@@ -1422,6 +1513,9 @@ li.inView {
     font-size: 0.65em;
   }
 }
+/*** 
+MIN WIDTH 85.375 EM 
+***/
 @media screen and (min-width: 85.375em) {
   /* HEADER */
   header {
@@ -1436,7 +1530,7 @@ li.inView {
   }
   header button::before {
     width: 1em;
-    margin: 0.1em 0;
+    margin: 0.12em 0;
   }
   header button::after {
     width: 1em;
@@ -1460,12 +1554,12 @@ li.inView {
   }
 
   /* HOME */
-  main section.content {
+  main section article {
     width: 1300px;
     max-width: 100%;
     margin: 10em auto;
   }
-  main section.img_block:nth-child(5) .content {
+  .img_section:nth-child(5) article {
     padding-left: 15em;
     justify-content: center;
   }
@@ -1480,6 +1574,9 @@ li.inView {
     transform: rotate(-45deg) translateX(0.25em);
   }
 }
+/*** 
+MIN WIDTH 150 EM 
+***/
 @media screen and (min-width: 150em) {
   /* HEADER */
   header {
@@ -1506,12 +1603,12 @@ li.inView {
   }
 
   /* HOME */
-  main section.content {
+  main section article {
     width: 1200px;
     max-width: 100%;
     margin: 10em auto;
   }
-  main section.img_block:nth-child(5) .content {
+  .img_section:nth-child(5) article {
     padding-left: 15em;
     justify-content: center;
   }

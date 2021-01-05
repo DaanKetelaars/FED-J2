@@ -1,4 +1,26 @@
-/* BASE */
+
+
+/**** 
+
+03 - BASE 
+
+****/
+
+
+/* 
+ANTIALIASED RESEARCH 
+
+Toch gegaan voor antialiased om mijn fonts wat strakker te maken. 
+Hieronder staan wat voor en nadelen die ik gevonden heb online.
+
+Tegen: https://github.com/google/fonts/issues/1170
+Tegen: https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/
+Voor: https://medium.com/better-programming/improving-font-rendering-with-css-3383fc358cbc
+MDN uitleg: https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
+
+*/
+
+
 body {
     font-style: normal;
     font-size: 1em;

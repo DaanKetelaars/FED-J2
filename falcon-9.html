@@ -1,26 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Daan Ketelaars">
+    <meta name="keywords" content="space,spacex,aerospace,elon musk,mars,falcon 9,falcon heavy,dragon">
+    <meta name="description"
+        content="SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SpaceX - Falcon 9</title>
     <link href="styles/main.css" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="manifest" href="./site.webmanifest">
-    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#000000">
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
 
+    <!-- HEADER/NAVIGATION -->
     <header>
+
+        <!-- OVERLAY WHEN SUB NAV/MOBILE NAV IS OPEN-->
         <div class="overlay"></div>
-        <!-- desktop and main nav -->
+
+        <!-- MAIN NAVIGATION -->
         <nav>
             <ul>
                 <li><a href="index.html" id="logo"><img src="images/logo-spacex.svg" alt="Logo SpaceX"></a></li>
@@ -33,10 +40,12 @@
             </ul>
         </nav>
 
-        <!-- mobile nav and sub nav -->
+        <!-- HAMBURGER MENU -->
         <button type="button">
             <div></div>
         </button>
+
+        <!-- SUB NAVIGATION -->
         <nav>
             <ul>
                 <li class="mobile_link"><a href="falcon-9.html">Falcon 9</a></li>
@@ -54,17 +63,24 @@
             </ul>
         </nav>
     </header>
+    <!-- END HEADER/NAVIGATION -->
 
+
+    <!-- MAIN -->
     <main>
-        <section class="falcon9_hero">
-            <section class="content">
+
+        <!-- INTRO SECTION -->
+        <section class="intro_section">
+            <article>
                 <h1 class="fade-element outView">Falcon 9</h1>
                 <h3 class="fade-element outView">First Orbital Class Rocket capable of reflight</h3>
-            </section>
+            </article>
             <img class="moveupdown scroll_arrow" src="./images/scroll-arrow.svg" alt="scroll down arrow">
         </section>
-        <section class="stats">
-            <section class="stats-content">
+
+        <!-- STATS SECTION -->
+        <section class="stats_section">
+            <section>
                 <h4>100</h4>
                 <h4>61</h4>
                 <h4>43</h4>
@@ -73,15 +89,20 @@
                 <p>Reflown Rockets</p>
             </section>
         </section>
-        <section class="rocket_overview">
-            <section class="content">
+
+        <!-- ROCKETS INFORMATION SECTION -->
+        <section class="rocket_info_section">
+            <article>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium assumenda consectetur
                     porro repellendus dicta vero voluptates cum culpa minima? Laborum et soluta optio doloribus error?
                     Officia, asperiores. Tempore, fuga.</p>
-            </section>
+            </article>
             <div class="line-rocket"></div>
         </section>
-        <section class="static_slider">
+
+
+        <!-- ROCKETS SLIDER SECTION -->
+        <section class="rocket_slider_section">
             <section class="slider_header">
                 <div class="slider-buttons">
                     <span><img src="./images/next-icon.svg" alt="previous icon"></span>
@@ -90,36 +111,49 @@
                 <h3>Falcon 9</h3>
                 <h2>Overview</h2>
             </section>
+
             <ul>
-                <li><span>Height</span>
+                <li>
+                    <span>Height</span>
                     <p>70 m / <span>229.6 ft</span></p>
                 </li>
-                <li><span>Diameter</span>
+                <li>
+                    <span>Diameter</span>
                     <p>3.7 m / <span>12 ft</span></p>
                 </li>
-                <li><span>Mass</span>
+                <li>
+                    <span>Mass</span>
                     <p>549,054 kg / <span>1,207,920 lb</span></p>
                 </li>
-                <li><span>Payload to leo</span>
+                <li>
+                    <span>Payload to leo</span>
                     <p>22,800 kg / <span>50,265 lb</span></p>
                 </li>
-                <li><span>Payload to leo</span>
+                <li>
+                    <span>Payload to leo</span>
                     <p>8,300 kg / <span>18,300 lb</span></p>
                 </li>
-                <li><span>Payload to mars</span>
+                <li>
+                    <span>Payload to mars</span>
                     <p>4,020 kg / <span>8,860 lb</span></p>
                 </li>
             </ul>
         </section>
-        <section class="video">
+
+
+        <!-- VIDEO SECTION -->
+        <section class="video_section">
             <button class="play-btn">
                 <img src="./images/play-btn.svg" alt="">
             </button>
-            <section class="content">
+            <article>
                 <h3 class="fade-element">Video</h3>
                 <h2 class="fade-element">Falcon 9 in flight</h2>
-            </section>
+            </article>
         </section>
+
+
+        <!-- VIDEO MODAL -->
         <section class="video-modal">
             <button class="close-modal"></button>
             <iframe width="100%" height="250" src="https://www.youtube.com/embed/Z4TXCZG_NEY" frameborder="0"
@@ -127,9 +161,12 @@
                 allowfullscreen></iframe>
             <span>Falcon 9 in flight</span>
         </section>
-        <section class="engines">
+
+
+        <!-- ENGINES SECTION -->
+        <section class="engines_section">
             <section class="engine_img"></section>
-            <section class="content">
+            <article>
                 <h3 class="fade-element">Engine</h3>
                 <h2 class="fade-element">Merlin</h2>
                 <h4 class="fade-element">Sea level | <span>Vacuum</span></h4>
@@ -147,16 +184,19 @@
                         <p>845 kN / <span>190,000 lbf</span></p>
                     </li>
                 </ul>
-            </section>
+            </article>
         </section>
-        <section class="gallery">
+
+
+        <!-- GALLERY SECTION -->
+        <section class="gallery_section">
             <section class="gallery_img"></section>
             <div class="slider-buttons">
                 <p>Falcon 9 first and second stages after separating in flight</p>
                 <span><img src="./images/prev-icon.svg" alt="next icon"></span>
                 <span><img src="./images/next-icon.svg" alt="previous icon"></span>
             </div>
-            <section class="content">
+            <article>
                 <div class="line fade-element"></div>
                 <p class="fade-element">For information about our launch services, contact <a
                         href="mailto:sales@spacex.com">sales@spacex.com</a>
@@ -165,10 +205,15 @@
                     <button type="button" class="animated_button fade-element">Download User's guide</button>
                     <button type="button" class="animated_button fade-element">Capabilities and services</button>
                 </section>
-            </section>
+            </article>
         </section>
-    </main>
 
+
+    </main>
+    <!-- END MAIN -->
+
+
+    <!-- FOOTER -->
     <footer>
         <span class="copyright">SpaceX © 2020</span>
         <ul>
@@ -181,7 +226,10 @@
             <li><a target="_blank" href="https://www.spacex.com/media/privacy_policy_spacex.pdf">Privacy policy</a></li>
         </ul>
     </footer>
+    <!-- END FOOTER -->
 
+
+    <!-- JS -->
     <script src="./scripts/script.js"></script>
     <script src="./scripts/falcon9.js"></script>
 

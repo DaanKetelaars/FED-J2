@@ -1,4 +1,16 @@
-/* RESPONSIVE */
+
+
+
+/**** 
+
+09 - RESPONSIVE 
+
+****/
+
+
+/*** 
+MIN WIDTH 48 EM 
+***/
 
 @media screen and (min-width: 48em) { 
     /* HEADER */
@@ -15,7 +27,7 @@
         button {
             &::before {
                 width: 1em;
-                margin: 0.16em 0;
+                margin: 0.14em 0;
             }
             &::after {
                 width: 1em;
@@ -62,8 +74,8 @@
             margin-top: 2em;
         }
     }
-    .gallery {
-        .content {
+    .gallery_section {
+        article {
           .button-container {
             button {
               min-width: 300px;
@@ -77,6 +89,12 @@
         }
     }
 }
+
+
+
+/*** 
+MIN WIDTH 64 EM 
+***/
 
 @media screen and (min-width: 64em) {
     /* HEADER */
@@ -155,7 +173,7 @@
             margin: .3em 1em 0; 
             &::before {
                 width: 1em;
-                margin: 0.1em 0;
+                margin: 0.12em 0;
             }
             &::after {
                 width: 1em;
@@ -183,7 +201,7 @@
     /* HOME */
     main {
         section {
-            &.content {
+            article {
                 width: calc(960px - 3em);
                 max-width: 100%;
                 margin: 10em auto;
@@ -217,22 +235,22 @@
                     }
                 }
             }
-            &.img_block {
+            @at-root .img_section {
                 &:nth-child(1) {
-                    background: url(../images/desktop-backgrounds/docking.jpg) no-repeat center center / cover;
+                    background: url("../images/desktop-backgrounds/docking.jpg") no-repeat center center / cover;
                 }
                 &:nth-child(2) {
-                    background: url(../images/desktop-backgrounds/home_demo2.jpg) no-repeat center center / cover;
+                    background: url("../images/desktop-backgrounds/home_demo2.jpg") no-repeat center center / cover;
                 }
                 &:nth-child(3) {
-                    background: url(../images/desktop-backgrounds/iss_game.jpg) no-repeat center center / cover;
+                    background: url("../images/desktop-backgrounds/iss_game.jpg") no-repeat center center / cover;
                 }
                 &:nth-child(4) {
-                    background: url(../images/desktop-backgrounds/SN8.jpg) no-repeat center center / cover;
+                    background: url("../images/desktop-backgrounds/SN8.jpg") no-repeat center center / cover;
                 }
                 &:nth-child(5) {
-                    background: url(../images/desktop-backgrounds/home_moon.jpg) no-repeat center center / cover;
-                    .content {
+                    background: url("../images/desktop-backgrounds/home_moon.jpg") no-repeat center center / cover;
+                    article {
                         padding-left: 5em;
                         justify-content: center;
                         h2 {
@@ -249,8 +267,8 @@
     /* FALCON 9 */
     main {
         section {
-            &.falcon9_hero {
-                .content {
+            @at-root .intro_section {
+                article {
                     h1 {
                         font-size: 6em;
                     }
@@ -259,8 +277,8 @@
                     }
                 }
             }
-            &.stats {
-                .stats-content {
+            @at-root .stats_section {
+                section {
                     padding: 6em 1em;
                     h4 {
                         font-size: 8em;
@@ -272,18 +290,18 @@
                     }
                 }
             }
-            &.rocket_overview {
-                .content {
+            @at-root .rocket_info_section {
+                article {
                     width: calc(960px - 3em);
                     p {
                         font-size: 1.25em;
                     }
                 }
                 .line-rocket {
-                    background-image: url(../images/desktop-backgrounds/WebsiteF9Fairings_Lines_Desktop.webp);
+                    background-image: url("../images/desktop-backgrounds/WebsiteF9Fairings_Lines_Desktop.webp");
                 }
             }
-            &.static_slider {
+            @at-root .rocket_slider_section {
                 max-width: calc(960px - 3em);
                 padding: 4em 0;
                 ul {
@@ -314,13 +332,13 @@
                     }
                 }
             }
-            &.video {
+            @at-root .video_section {
                 .play-btn {
                     img {
-                        width: 3vw;
+                        width: 5vw;
                     }
                 }
-                .content {
+                article {
                     h3 {
                         font-size: 1.25em;
                     }
@@ -329,11 +347,11 @@
                     }
                 }
             }
-            &.engines {
+            @at-root .engines_section {
                 margin: 0 auto;
                 padding: 10em 0 10em;
-                background: url(../images/mobile-backgrounds/Merlin.webp) no-repeat center center / cover;
-                .content {
+                background: url("../images/mobile-backgrounds/Merlin.webp") no-repeat center center / cover;
+                article {
                     h3 {
                         font-size: 1.25em;
                         font-family: "DIN-Regular", Arial, Verdana, sans-serif;
@@ -356,7 +374,7 @@
                     padding: 0;
                 }
             }
-            &.gallery {
+            @at-root .gallery_section {
                 .slider-buttons {
                     span {
                         img {
@@ -364,7 +382,7 @@
                         }
                     }
                 }
-                .content {
+                article {
                     .line {
                         height: 25vh;
                     }
@@ -398,7 +416,7 @@
                     }
                 }
             }
-            &.video-modal {
+            @at-root .video-modal {
                 iframe {
                     width: 640px;
                     height: 350px;
@@ -457,6 +475,12 @@
         }
     }
 }
+
+
+/*** 
+MIN WIDTH 85.375 EM 
+***/
+
 @media screen and (min-width: 85.375em) {
     /* HEADER */
     header {
@@ -469,7 +493,7 @@
             right: 1em;
             &::before {
                 width: 1em;
-                margin: .1em 0;
+                margin: .12em 0;
             }
             &::after {
                 width: 1em;
@@ -497,14 +521,14 @@
     /* HOME */
     main {
         section {
-            &.content {
+            article {
                 width: 1300px;
                 max-width: 100%;
                 margin: 10em auto;
             }
-            &.img_block {
+            @at-root .img_section {
                 &:nth-child(5) {
-                    .content {
+                    article {
                         padding-left: 15em;
                         justify-content: center;
                     }
@@ -524,6 +548,13 @@
         }
     }
 }
+
+
+/*** 
+MIN WIDTH 150 EM 
+***/
+
+
 @media screen and (min-width: 150em) {
     /* HEADER */
     header {
@@ -552,14 +583,14 @@
     /* HOME */
     main {
         section {
-            &.content {
+            article {
                 width: 1200px;
                 max-width: 100%;
                 margin: 10em auto;
             }
-            &.img_block {
+            @at-root .img_section {
                 &:nth-child(5) {
-                    .content {
+                    article {
                         padding-left: 15em;
                         justify-content: center;
                     }
