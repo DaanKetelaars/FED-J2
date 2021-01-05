@@ -4,18 +4,17 @@
 
 ## Bronnenlijst
 
-1. counter: https://morioh.com/p/bd6b4702d394
-2. hamburger menu: https://dev.to/ljcdev/easy-hamburger-menu-with-js-2do0
-3. https://dev.to/mohdhussein/how-to-show-the-clicked-element-only-and-hide-others-in-vanilla-javascript-1ip2
-4. https://stackoverflow.com/questions/43569824/changing-opacity-when-scrolling
-5. https://w3bits.com/animated-menu-icon-css/
-6. https://stackoverflow.com/questions/43569824/changing-opacity-when-scrolling
-7. https://dev.to/changoman/showhide-element-on-scroll-w-vanilla-js-3odm
-8. stackoverflow
-9. MDN
-10. codepen
-11. Dev.to
-12. Github
+1. hamburger menu: https://dev.to/ljcdev/easy-hamburger-menu-with-js-2do0
+2. https://dev.to/mohdhussein/how-to-show-the-clicked-element-only-and-hide-others-in-vanilla-javascript-1ip2
+3. https://stackoverflow.com/questions/43569824/changing-opacity-when-scrolling
+4. https://w3bits.com/animated-menu-icon-css/
+5. https://stackoverflow.com/questions/43569824/changing-opacity-when-scrolling
+6. https://dev.to/changoman/showhide-element-on-scroll-w-vanilla-js-3odm
+7. stackoverflow
+8. MDN
+9. codepen
+10. Dev.to
+11. Github
 
 ## BRONNEN SPACEX
 
