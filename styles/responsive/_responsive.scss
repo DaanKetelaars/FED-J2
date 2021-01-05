@@ -137,6 +137,9 @@ MIN WIDTH 64 EM
                         } 
                     }
                 }
+                @at-root .mobile_link {
+                    display: none;
+                }
                 @at-root .animated_link {
                     a {
                         &::before{

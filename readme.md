@@ -14,6 +14,7 @@
 8. MDN
 9. codepen
 10. Dev.to
+11. Github
 
 ## BRONNEN SPACEX
 
@@ -21,11 +22,9 @@ Alle images, background images en iconen komen direct van de SpaceX website.
 
 ## Eindgesprek (week 7/8)
 
-Alle comments weten toe te voegen en code nog wat opgeschoond.
+Code nog wat opgeschoond.
 
 **Screenshot(s):**
-
--screenshot(s) van je eindresultaat-
 
 ## Voortgang 3 (week 6)
 

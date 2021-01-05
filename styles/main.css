@@ -1228,6 +1228,10 @@ MIN WIDTH 64 EM
     transform: scaleX(1);
     transform-origin: left center;
   }
+  .mobile_link {
+    display: none;
+  }
+
   .animated_link a::before {
     background: #FFF;
     content: "";
