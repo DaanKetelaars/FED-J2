@@ -489,38 +489,38 @@ main section article button {
   overflow: hidden;
   z-index: 100;
 }
-main section.img_section {
+.img_section {
   height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-main section.img_section:nth-child(1) {
+.img_section:nth-child(1) {
   background: url("../images/mobile-backgrounds/docking.webp") no-repeat center center/cover;
 }
-main section.img_section:nth-child(2) {
+.img_section:nth-child(2) {
   background: url("../images/mobile-backgrounds/home_demo2.webp") no-repeat center center/cover;
 }
-main section.img_section:nth-child(3) {
+.img_section:nth-child(3) {
   background: url("../images/mobile-backgrounds/iss_game.webp") no-repeat center center/cover;
 }
-main section.img_section:nth-child(4) {
+.img_section:nth-child(4) {
   background: url("../images/mobile-backgrounds/SN8.webp") no-repeat center center/cover;
 }
-main section.img_section:nth-child(4) article {
+.img_section:nth-child(4) article {
   justify-content: flex-start;
 }
-main section.img_section:nth-child(5) {
+.img_section:nth-child(5) {
   background: url("../images/mobile-backgrounds/home_moon.webp") no-repeat center center/cover;
 }
-main section.img_section:nth-child(5) article {
+.img_section:nth-child(5) article {
   justify-content: flex-start;
   width: 50%;
   margin-left: auto;
   margin-right: 2em;
 }
-main section.img_section .scroll_arrow {
+.img_section .scroll_arrow {
   width: 2em;
   margin: 0 auto;
   padding-bottom: 3em;
@@ -1314,29 +1314,29 @@ MIN WIDTH 64 EM
     color: #000;
     cursor: pointer;
   }
-  main section.img_section:nth-child(1) {
+  .img_section:nth-child(1) {
     background: url("../images/desktop-backgrounds/docking.jpg") no-repeat center center/cover;
   }
-  main section.img_section:nth-child(2) {
+  .img_section:nth-child(2) {
     background: url("../images/desktop-backgrounds/home_demo2.jpg") no-repeat center center/cover;
   }
-  main section.img_section:nth-child(3) {
+  .img_section:nth-child(3) {
     background: url("../images/desktop-backgrounds/iss_game.jpg") no-repeat center center/cover;
   }
-  main section.img_section:nth-child(4) {
+  .img_section:nth-child(4) {
     background: url("../images/desktop-backgrounds/SN8.jpg") no-repeat center center/cover;
   }
-  main section.img_section:nth-child(5) {
+  .img_section:nth-child(5) {
     background: url("../images/desktop-backgrounds/home_moon.jpg") no-repeat center center/cover;
   }
-  main section.img_section:nth-child(5) article {
+  .img_section:nth-child(5) article {
     padding-left: 5em;
     justify-content: center;
   }
-  main section.img_section:nth-child(5) article h2 {
+  .img_section:nth-child(5) article h2 {
     width: 15ch;
   }
-  main section.img_section:nth-child(5) article p {
+  .img_section:nth-child(5) article p {
     width: 50ch;
   }
 
