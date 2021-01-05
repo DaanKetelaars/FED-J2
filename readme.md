@@ -26,6 +26,13 @@ Code nog wat opgeschoond.
 
 **Screenshot(s):**
 
+<img src="images/proces-assets/Schermafbeelding 2021-01-05 om 16.48.45.png" width="375px" alt="Screenshot eigen website pagina 1">
+<img src="images/proces-assets/Schermafbeelding 2021-01-05 om 16.48.39.png" width="375px" alt="Screenshot eigen website pagina 2">
+<img src="images/proces-assets/Schermafbeelding 2021-01-05 om 16.52.20.png" width="375px" alt="Screenshot eigen website pagina 3">
+<img src="images/proces-assets/Schermafbeelding 2021-01-05 om 16.49.25.png" width="375px" alt="Screenshot eigen website pagina 4">
+<img src="images/proces-assets/Schermafbeelding 2021-01-05 om 16.49.49.png" width="375px" alt="Screenshot eigen website pagina 5">
+<img src="images/proces-assets/Schermafbeelding 2021-01-05 om 16.49.32.png" width="375px" alt="Screenshot eigen website pagina 6">
+
 ## Voortgang 3 (week 6)
 
 Puntjes op de i
