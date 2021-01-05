@@ -235,7 +235,7 @@ MIN WIDTH 64 EM
                     }
                 }
             }
-            @at-root .img_section {
+            &.img_section {
                 &:nth-child(1) {
                     background: url("../images/desktop-backgrounds/docking.jpg") no-repeat center center / cover;
                 }

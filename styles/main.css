@@ -1314,29 +1314,29 @@ MIN WIDTH 64 EM
     color: #000;
     cursor: pointer;
   }
-  .img_section:nth-child(1) {
+  main section.img_section:nth-child(1) {
     background: url("../images/desktop-backgrounds/docking.jpg") no-repeat center center/cover;
   }
-  .img_section:nth-child(2) {
+  main section.img_section:nth-child(2) {
     background: url("../images/desktop-backgrounds/home_demo2.jpg") no-repeat center center/cover;
   }
-  .img_section:nth-child(3) {
+  main section.img_section:nth-child(3) {
     background: url("../images/desktop-backgrounds/iss_game.jpg") no-repeat center center/cover;
   }
-  .img_section:nth-child(4) {
+  main section.img_section:nth-child(4) {
     background: url("../images/desktop-backgrounds/SN8.jpg") no-repeat center center/cover;
   }
-  .img_section:nth-child(5) {
+  main section.img_section:nth-child(5) {
     background: url("../images/desktop-backgrounds/home_moon.jpg") no-repeat center center/cover;
   }
-  .img_section:nth-child(5) article {
+  main section.img_section:nth-child(5) article {
     padding-left: 5em;
     justify-content: center;
   }
-  .img_section:nth-child(5) article h2 {
+  main section.img_section:nth-child(5) article h2 {
     width: 15ch;
   }
-  .img_section:nth-child(5) article p {
+  main section.img_section:nth-child(5) article p {
     width: 50ch;
   }
 

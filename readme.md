@@ -21,7 +21,7 @@ Alle images, background images en iconen komen direct van de SpaceX website.
 
 ## Eindgesprek (week 7/8)
 
--dit ging goed & dit was lastig-
+Alle comments weten toe te voegen en code nog wat opgeschoond.
 
 **Screenshot(s):**
 
@@ -29,7 +29,7 @@ Alle images, background images en iconen komen direct van de SpaceX website.
 
 ## Voortgang 3 (week 6)
 
--same as voortgang 1-
+Puntjes op de i
 
 ## Voortgang 2 (week 5)
 
