@@ -571,14 +571,14 @@ main section article button {
   padding-bottom: 3em;
 }
 
-main section.stats_section {
+.stats_section {
   background: #000;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
 }
-main section.stats_section section {
+.stats_section section {
   max-width: 960px;
   width: 100%;
   height: 100%;
@@ -589,19 +589,20 @@ main section.stats_section section {
   justify-items: center;
   margin: 0;
 }
-main section.stats_section section h4 {
+.stats_section section h4 {
   color: white;
   font-size: 3em;
   padding-bottom: 0.25em;
   font-family: "DIN-Regular", Arial, Verdana, sans-serif;
 }
-main section.stats_section section p {
+.stats_section section p {
   font-size: 0.75em;
   padding: 0 1em;
   text-align: center;
   line-height: 1.25em;
   text-transform: uppercase;
 }
+
 .rocket_info_section {
   height: 100%;
   width: 100%;

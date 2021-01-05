@@ -50,7 +50,7 @@ main {
         padding-bottom: 3em;
     }
     }
-    &.stats_section {
+    @at-root .stats_section {
       background: $dark-color;
       width: 100%;
       height: 100%;
