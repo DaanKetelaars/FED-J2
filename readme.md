@@ -15,9 +15,9 @@
 9. codepen
 10. Dev.to
 
-/**_ BRONNEN SPACEX
+## BRONNEN SPACEX
+
 Alle images, background images en iconen komen direct van de SpaceX website.
-_**/
 
 ## Eindgesprek (week 7/8)
 
