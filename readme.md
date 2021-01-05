@@ -10,11 +10,12 @@
 4. https://stackoverflow.com/questions/43569824/changing-opacity-when-scrolling
 5. https://w3bits.com/animated-menu-icon-css/
 6. https://stackoverflow.com/questions/43569824/changing-opacity-when-scrolling
-7. stackoverflow
-8. MDN
-9. codepen
-10. Dev.to
-11. Github
+7. https://dev.to/changoman/showhide-element-on-scroll-w-vanilla-js-3odm
+8. stackoverflow
+9. MDN
+10. codepen
+11. Dev.to
+12. Github
 
 ## BRONNEN SPACEX
 
