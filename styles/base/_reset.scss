@@ -1,11 +1,8 @@
-
-
 /**** 
 
 01 - RESET 
 
 ****/
-
 
 *,
 *::after,
@@ -16,6 +13,10 @@
 * {
   padding: 0;
   margin: 0;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 h1,

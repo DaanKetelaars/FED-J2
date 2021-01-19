@@ -10,6 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SpaceX - Falcon 9</title>
     <link href="styles/main.css" rel="stylesheet">
+    <!-- SWIPER SLIDER CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- FAVICON-->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
@@ -81,9 +84,12 @@
         <!-- STATS SECTION -->
         <section class="stats_section">
             <section>
-                <h4>100</h4>
+                <!-- <h4>100</h4>
                 <h4>61</h4>
-                <h4>43</h4>
+                <h4>43</h4> -->
+                <h4 class="counter_one"></h4>
+                <h4 class="counter_two"></h4>
+                <h4 class="counter_three"></h4>
                 <p>Total Launches</p>
                 <p>Total Landings</p>
                 <p>Reflown Rockets</p>
@@ -91,19 +97,34 @@
         </section>
 
         <!-- ROCKETS INFORMATION SECTION -->
-        <section class="rocket_info_section">
-            <article>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium assumenda consectetur
-                    porro repellendus dicta vero voluptates cum culpa minima? Laborum et soluta optio doloribus error?
-                    Officia, asperiores. Tempore, fuga.</p>
-            </article>
-            <div class="line-rocket"></div>
-        </section>
+        <section class="rocket_change_section">
 
+            <!-- GSAP ScrollTrigger animation  -->
+            <section class="bg-wrap">
+                <section class="bg one"></section>
+                <section class="bg two"></section>
+            </section>
+
+            <article class="bg-text one">
+                <article>
+                    <p>
+                        Falcon 9 is a reusable, two-stage rocket designed and manufactured by SpaceX for the reliable
+                        and
+                        safe transport of people and payloads into Earth orbit and beyond. Falcon 9 is the world’s first
+                        orbital class reusable rocket. Reusability allows SpaceX to refly the most expensive parts of
+                        the rocket, which in turn drives down the cost of space access.
+                    </p>
+                </article>
+            </article>
+            <article class="bg-text two">
+                <!-- empty article to make sure text item one scrolls over images  -->
+            </article>
+
+        </section>
 
         <!-- ROCKETS SLIDER SECTION -->
         <section class="rocket_slider_section">
-            <section class="slider_header">
+            <section class="slider_header scrlElm-one">
                 <div class="slider-buttons">
                     <span><img src="./images/next-icon.svg" alt="previous icon"></span>
                     <span><img src="./images/prev-icon-grey.svg" alt="next icon"></span>
@@ -111,7 +132,6 @@
                 <h3>Falcon 9</h3>
                 <h2>Overview</h2>
             </section>
-
             <ul>
                 <li>
                     <span>Height</span>
@@ -139,6 +159,7 @@
                 </li>
             </ul>
         </section>
+
 
 
         <!-- VIDEO SECTION -->
@@ -190,12 +211,46 @@
 
         <!-- GALLERY SECTION -->
         <section class="gallery_section">
-            <section class="gallery_img"></section>
-            <div class="slider-buttons">
-                <p>Falcon 9 first and second stages after separating in flight</p>
-                <span><img src="./images/prev-icon.svg" alt="next icon"></span>
-                <span><img src="./images/next-icon.svg" alt="previous icon"></span>
-            </div>
+            <!-- Swiper -->
+            <section class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <p>Falcon 9 first and second stages after separating in flight</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <p>Falcon 9 lifts off with its Iridium-5 payload</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <p>Falcon 9 lands on the droneship Just Read the Instructions</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <p>Close-up on the Merlin engines of Falcon 9 during liftoff</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <p>Falcon 9 leaves a trail of light as it lifts off from Vandenberg</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <p>Falcon 9 lifts off with Dragon for an in-flight test of the Crew Dragon abort system</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <p>Falcon 9 lifts off with its Iridium-8 payload</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <p>Falcon 9 with its Radarsat payload at sunset before launch</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <p>Falcon 9 lands at Cape Canaveral</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <p>Falcon 9 vertical with its Iridium payload at moonrise</p>
+                    </li>
+                </ul>
+                <!-- Next/Prev Buttons -->
+                <section class="swiper-buttons">
+                    <button class="prev"><img src="./images/prev-icon.svg" alt="next icon"></button>
+                    <button class="next"><img src="./images/next-icon.svg" alt="next icon"></button>
+                </section>
+            </section>
             <article>
                 <div class="line fade-element"></div>
                 <p class="fade-element">For information about our launch services, contact <a
@@ -211,6 +266,7 @@
 
     </main>
     <!-- END MAIN -->
+
 
 
     <!-- FOOTER -->
@@ -229,9 +285,26 @@
     <!-- END FOOTER -->
 
 
+
+    <!-- GSAP JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <!-- SWIPER SLIDER JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        let swiper = new Swiper('.swiper-container', {
+            cssMode: true,
+            navigation: {
+                nextEl: '.next',
+                prevEl: '.prev',
+            },
+        });
+    </script>
     <!-- JS -->
     <script src="./scripts/script.js"></script>
     <script src="./scripts/falcon9.js"></script>
+
 
 </body>
 
