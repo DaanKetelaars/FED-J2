@@ -109,3 +109,18 @@ const checkPos = () => {
 }
 /* simple window addeventlistener on scroll */
 window.addEventListener('scroll', checkPos);
+
+
+/* EASTER EGG AUDIO */
+
+const playGhostTown = (e) => {
+    const audioGhostTown = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    if (!audio) return; //stop the function from running all together
+    audioGhostTown.currentTime = 0; // rewind to the start
+    audioGhostTown.play();
+}
+
+const keys = document.querySelectorAll('.key');
+
+window.addEventListener('keydown', playGhostTown);
