@@ -116,11 +116,11 @@ window.addEventListener('scroll', checkPos);
 const playGhostTown = (e) => {
     const audioGhostTown = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-    if (!audio) return; //stop the function from running all together
+    if (!audioGhostTown) return; //stop the function from running all together
     audioGhostTown.currentTime = 0; // rewind to the start
     audioGhostTown.play();
 }
 
-const keys = document.querySelectorAll('.key');
+const keys = document.querySelector('.key');
 
 window.addEventListener('keydown', playGhostTown);
